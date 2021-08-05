@@ -1,3 +1,11 @@
 # My Portfolio and My Blog
 
-Developed with Python, Django, Postgresql, HTML, CSS and Bootstrap.
+Developed with:
+<ul>
+  <li> Python </li>
+  <li> Django </li>
+  <li> Postgresql </li>
+  <li> HTML </li>
+  <li> CSS </li>
+  <li> Bootstrap </li>
+</ul>
