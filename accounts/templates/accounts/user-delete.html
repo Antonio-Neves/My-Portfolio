@@ -1,0 +1,26 @@
+{% extends 'base/_base_index.html' %}
+
+{% block title %}Delete User{% endblock %}
+
+{% block body_title %}Delete User{% endblock %}
+
+{% block body_content %}
+
+    <div class="container back01">
+        <h2>{{ object.first_name }} {{ object.last_name }}</h2>
+        <p>
+        Are you sure you want to delete your account?
+        <br>
+        All your data will be removed.
+        </p>
+
+        <form method="POST" class="form" name="form_canal">
+            {% csrf_token %}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btncustom shadow-lg mr-2" name="btn_cadastro_canal">Yes</button>
+                <a class="btn btn-primary btncustom shadow-lg mr-2" role="button" href="{% url 'index'%}">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
