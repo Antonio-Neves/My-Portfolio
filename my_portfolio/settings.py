@@ -233,8 +233,8 @@ if not DEBUG:
 	EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 	DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
-	# ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
-	# MANAGERS = ADMINS
+	ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
+	MANAGERS = ADMINS
 
 
 # ----------------------------------------------------------
