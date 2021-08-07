@@ -14,6 +14,7 @@ from django.contrib.auth.views import (
 
 
 class UserLogin(SuccessMessageMixin, LoginView):
+	redirect_authenticated_user = True
 	template_name = 'accounts/login.html'
 
 
@@ -23,6 +24,14 @@ class UserCreate(SuccessMessageMixin, CreateView):
 	template_name = 'accounts/user-new.html'
 	success_url = reverse_lazy('login')
 	success_message = 'Welcome! Log in to start'
+
+	def get(self, request, *args, **kwargs):
+
+		if request.user.is_authenticated:
+			return redirect('index')
+
+		else:
+			return super().get(request, *args, **kwargs)
 
 
 class UserChange(SuccessMessageMixin, UpdateView):
