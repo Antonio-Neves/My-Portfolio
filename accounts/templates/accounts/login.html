@@ -1,36 +1,29 @@
 {% extends 'base/_base_index.html' %}
-
 {% block title %}Login{% endblock %}
-
 {% block body_title %}Login{% endblock %}
-
 {% block body_content %}
-
     <div class="container back01">
         <form class="form-signin" method="POST" autocomplete="off" id="form-login">
             {% csrf_token %}
             <div class="row">
-                <div class="col">
+                <div class="col-md">
                     <div class="form-group">
                         <label for="username">Email</label>
                         <input type="email" id="username" name="username" class="form-control" value="{{ request.POST.username }}" required autofocus>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md">
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" class="form-control" required>
                     </div>
                 </div>
             </div>
-
             <div>
                 <button class="btn btn-primary mr-2" type="submit">Login</button>
                 <a class="btn btn-primary mr-2" href="{% url 'password-reset' %}">Forgot password?</a>
                 <a class="btn btn-primary btncustom shadow-lg mr-2" role="button" href="{% url 'index' %}">Cancel</a>
             </div>
         </form>
-
     </div>
-
 {% endblock %}
