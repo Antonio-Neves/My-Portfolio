@@ -42,6 +42,11 @@
     font-size: 1.8rem;
 }
 
+.navbar-principal-icon:hover {
+    color: var(--navbar-text-color-focus);
+    background-color: var(--navbar-bg-contrast);
+}
+
 .icon-last {
     margin-right: 1.5rem;
 }
@@ -51,7 +56,7 @@
     width: 100%;
 }
 
-.home-link,
+/*.home-link,*/
 .navbar-link {
     color: var(--navbar-text-color);
     text-decoration: none;
@@ -62,10 +67,10 @@
                 color 0.2s ease-in-out;
 }
 
-/*.home-link:focus,*/
-.home-link:hover {
-    color: var(--navbar-text-color-focus);
-}
+/*!*.home-link:focus,*!*/
+/*.home-link:hover {*/
+/*    color: var(--navbar-text-color-focus);*/
+/*}*/
 
 .navbar-link {
     justify-content: center;
