@@ -5,7 +5,11 @@
     --navbar-text-color-focus: rgba(190, 255, 0, 1);
     --navbar-bg-contrast: transparent;
     --withe-blue-color: rgb(235,240,255);
+    --bright-blue-color: rgb(10,210,250);
+    --bright-green-color: rgb(10,250,210);
+    --yellow-color: #FBBA00;
     --line-height: 40px;
+
 }
 
 * {
@@ -258,24 +262,21 @@ p {
 /*!* Copyright                 *!*/
 /*!*****************************!*/
 
-#copyright
-{
+#copyright {
     position: relative;
     text-align: center;
     color: rgba(0, 0, 0,.5);
     padding: 5px 0;
 }
 
-#copyright .container
-{
+#copyright .container {
     padding: 2em 0;
     border-top: 1px solid;
     border-color: rgba(255,255,255,.1);
     /*color:  rgba(255,255,255,.8);*/
 }
 
-#copyright a
-{
+#copyright a {
     font-family: Quicksand, sans-serif;
     font-weight: 400;
     text-decoration: none;

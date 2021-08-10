@@ -8,7 +8,7 @@
 }
 
 .anime-text_p {
-    color: rgb(10,212,250);
+    color: var(--bright-blue-color);
 }
 
 .anime-text {
@@ -17,7 +17,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 2rem;
     line-height: var(--line-height);
-    color: rgb(10,250,212);
+    color: var(--bright-green-color);
 }
 
 .anime-text-container {
@@ -43,7 +43,7 @@
 .anime-text-container:after, .anime-text-container:before {
     position: absolute;
     top: 0;
-    color: #FBBA00;
+    color: var(--yellow-color);
     font-size: 2rem;
     line-height: var(--line-height);
     -webkit-animation-name: opacity;
