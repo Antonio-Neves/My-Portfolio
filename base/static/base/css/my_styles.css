@@ -41,7 +41,7 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/media/home_foto_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #102D69 no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_fhoto_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
 }
 
