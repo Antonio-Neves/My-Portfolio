@@ -65,12 +65,12 @@ window.cookieconsent.initialise({
   "palette": {
     "popup": {
       "background": "rgba(16,45,105, 0.6)",
-      "text": "rgba(255, 255, 200, 1)"
+      "text": "rgb(235,240,255)"
     },
     "button": {
       "background": "transparent",
-      "text": "rgba(255, 255, 200, 1)",
-      "border": "rgba(255, 255, 200, 1)"
+      "text": "rgb(235,240,255)",
+      "border": "rgb(235,240,255)"
     }
   },
   "content": {
