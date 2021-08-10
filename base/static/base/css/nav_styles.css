@@ -27,9 +27,23 @@
     font-weight: 300;
     color: var(--navbar-text-color);
     /* offset-x | offset-y | blur-radius | color */
-    text-shadow: 1px 1px 2px black;
+    /*text-shadow: 1px 1px 2px black;*/
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+.navbar-principal-icon {
+    /*color: var(--navbar-text-color);*/
+    color: rgb(195,200,215);
+    margin-right: .7rem;
+    margin-top: .4rem;
+    /*text-shadow: 1px 1px 2px black;*/
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.icon-last {
+    margin-right: 1.5rem;
 }
 
 .navbar-item {
@@ -84,6 +98,11 @@ button:focus {
     flex-direction: column;
 }
 
+/*.navbar-container i {*/
+/*   font-size: 1.7rem;*/
+/*    color: var(--white-blue-color)*/
+/*}*/
+
 .icon-bar {
     display: block;
     width: 25px;
@@ -92,7 +111,7 @@ button:focus {
     transition: background-color 0.2s ease-in-out,
                 transform 0.2s ease-in-out,
                 opacity 0.2s ease-in-out;
-    background-color: var(--navbar-text-color);
+    background-color: rgba(195,200,215);
 }
 
 /*.navbar-toggle:focus .icon-bar,*/

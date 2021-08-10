@@ -4,7 +4,7 @@
     --navbar-text-color: rgb(235,240,255);
     --navbar-text-color-focus: rgb(10,210,250);
     --navbar-bg-contrast: transparent;
-    --withe-blue-color: rgb(235,240,255);
+    --white-blue-color: rgb(235,240,255);
     --bright-blue-color: rgb(10,210,250);
     --bright-green-color: rgb(10,250,210);
     --yellow-color: #FBBA00;
@@ -52,7 +52,7 @@ p {
 
 .h1-intro-home {
     font-size: 6rem;
-    color: var(--withe-blue-color);
+    color: var(--white-blue-color);
     line-height: 1;
     margin: 0;
 }
