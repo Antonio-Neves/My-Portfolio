@@ -25,7 +25,7 @@
 .navbar-container a, span {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    color: var(--withe-blue-color);
+    color: var(--navbar-text-color);
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 1px 1px 2px black;
     text-decoration: none;
@@ -39,7 +39,7 @@
 
 .home-link,
 .navbar-link {
-    color: var(--withe-blue-color);
+    color: var(--navbar-text-color);
     text-decoration: none;
     display: flex;
     font-weight: 400;
@@ -50,7 +50,7 @@
 
 /*.home-link:focus,*/
 .home-link:hover {
-    color: var(--bright-blue-color);
+    color: var(--navbar-text-color-focus);
 }
 
 .navbar-link {
@@ -62,7 +62,7 @@
 
 .navbar-link:focus,
 .navbar-link:hover {
-    color: var(--bright-blue-color);
+    color: var(--navbar-text-color-focus);
     background-color: var(--navbar-bg-contrast);
 }
 
@@ -92,12 +92,12 @@ button:focus {
     transition: background-color 0.2s ease-in-out,
                 transform 0.2s ease-in-out,
                 opacity 0.2s ease-in-out;
-    background-color: var(--withe-blue-color);
+    background-color: var(--navbar-text-color);
 }
 
 /*.navbar-toggle:focus .icon-bar,*/
 .navbar-toggle:hover .icon-bar {
-    background: var(--bright-blue-color);
+    background: var(--navbar-text-color-focus);
 }
 
 #navbar.opened .navbar-toggle .icon-bar:first-child,

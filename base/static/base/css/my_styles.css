@@ -1,8 +1,8 @@
 :root {
     --navbar-height: 75px;
     --navbar-bg-color: transparent;
-    --navbar-text-color: rgba(255, 255, 200, 1);
-    --navbar-text-color-focus: rgba(190, 255, 0, 1);
+    --navbar-text-color: rgb(235,240,255);
+    --navbar-text-color-focus: rgb(10,210,250);
     --navbar-bg-contrast: transparent;
     --withe-blue-color: rgb(235,240,255);
     --bright-blue-color: rgb(10,210,250);
