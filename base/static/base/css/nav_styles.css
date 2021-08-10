@@ -32,7 +32,7 @@
     font-size: 1.5rem;
 }
 
-.navbar-principal-icon {
+.navbar-container a i {
     /*color: var(--navbar-text-color);*/
     color: rgb(195,200,215);
     margin-right: .7rem;
@@ -42,13 +42,13 @@
     font-size: 1.8rem;
 }
 
-.navbar-principal-icon:hover {
+.navbar-container a i:hover {
     color: var(--navbar-text-color-focus);
     background-color: var(--navbar-bg-contrast);
 }
 
 .icon-last {
-    margin-right: 1.5rem;
+    margin-right: 1%;
 }
 
 .navbar-item {
@@ -67,11 +67,6 @@
                 color 0.2s ease-in-out;
 }
 
-/*!*.home-link:focus,*!*/
-/*.home-link:hover {*/
-/*    color: var(--navbar-text-color-focus);*/
-/*}*/
-
 .navbar-link {
     justify-content: center;
     width: 100%;
@@ -83,12 +78,6 @@
 .navbar-link:hover {
     color: var(--navbar-text-color-focus);
     background-color: var(--navbar-bg-contrast);
-}
-
-
-button:focus {
-     outline: 0;
-     /*outline: 5px auto -webkit-focus-ring-color; */
 }
 
 .navbar-toggle {
@@ -103,11 +92,6 @@ button:focus {
     flex-direction: column;
 }
 
-/*.navbar-container i {*/
-/*   font-size: 1.7rem;*/
-/*    color: var(--white-blue-color)*/
-/*}*/
-
 .icon-bar {
     display: block;
     width: 25px;
@@ -119,7 +103,6 @@ button:focus {
     background-color: rgba(195,200,215);
 }
 
-/*.navbar-toggle:focus .icon-bar,*/
 .navbar-toggle:hover .icon-bar {
     background: var(--navbar-text-color-focus);
 }
@@ -156,13 +139,11 @@ button:focus {
 }
 
 #navbar.opened .navbar-menu {
-    /*background-color: rgba(0, 0, 0, 0.8);*/
     opacity: 1;
     visibility: visible;
 }
 
 .navbar-links {
-
     list-style-type: none;
     max-height: 0;
     overflow: hidden;
@@ -171,7 +152,6 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*left: 0;*/
     right: 0;
     margin: 1.4rem;
     border-radius: 5px;

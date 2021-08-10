@@ -9,7 +9,6 @@
     --bright-green-color: rgb(10,250,210);
     --yellow-color: #FBBA00;
     --line-height: 40px;
-
 }
 
 * {
@@ -56,12 +55,6 @@ p {
     line-height: 1;
     margin: 0;
 }
-
-/*.container-intro-home p {*/
-/*    color: #81d4fa;*/
-/*    !*background-color: rgba(16,45,105, 0.4);*!*/
-/*    !*padding-bottom: 1rem;*!*/
-/*}*/
 
 /*****************************/
 /* Principal Containers      */
@@ -181,9 +174,9 @@ p {
 /*    box-shadow: 1px 1px 3px darkgreen;*/
 /*}*/
 
-/*****************************/
-/* @Media                    */
-/*****************************/
+/*!*****************************!*/
+/*!* @media                    *!*/
+/*!*****************************!*/
 
 @media screen and (max-width: 1000px) {
 
@@ -215,30 +208,6 @@ p {
 /*    }*/
 /*}*/
 
-
-/*!*****************************!*/
-/*!* Animated Title            *!*/
-/*!*****************************!*/
-
-/*.ml12 {*/
-/*  !*font-weight: 200;*!*/
-/*  !*font-size: 1rem;*!*/
-/*  !*text-transform: uppercase;*!*/
-/*  !*letter-spacing: 0.1em;*!*/
-/*}*/
-
-/*.ml12 .letter {*/
-/*  display: inline-block;*/
-/*  line-height: 1em;*/
-/*}*/
-
-/*!*****************************!*/
-/*!* Logo                      *!*/
-/*!*****************************!*/
-
-/*.logo {*/
-/*    height: 50px;*/
-/*}*/
 
 /*!*****************************!*/
 /*!* Forms                     *!*/
