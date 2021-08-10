@@ -2,8 +2,6 @@
 /* Nav                       */
 /*****************************/
 
-
-
 #navbar {
     position: absolute;
     height: var(--navbar-height);
@@ -25,8 +23,9 @@
 }
 
 .navbar-container a, span {
-    font-family: Quicksand, sans-serif;
-    color: var(--navbar-text-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: var(--withe-blue-color);
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 1px 1px 2px black;
     text-decoration: none;
@@ -40,7 +39,7 @@
 
 .home-link,
 .navbar-link {
-    color: var(--navbar-text-color);
+    color: var(--withe-blue-color);
     text-decoration: none;
     display: flex;
     font-weight: 400;
@@ -49,21 +48,21 @@
                 color 0.2s ease-in-out;
 }
 
-.home-link:focus,
+/*.home-link:focus,*/
 .home-link:hover {
-    color: var(--navbar-text-color-focus);
+    color: var(--bright-blue-color);
 }
 
 .navbar-link {
     justify-content: center;
     width: 100%;
-    padding: 0.4em 0.8em;
+    padding: 0.2em 0.8em;
     border-radius: 5px;
 }
 
 .navbar-link:focus,
 .navbar-link:hover {
-    color: var(--navbar-text-color-focus);
+    color: var(--bright-blue-color);
     background-color: var(--navbar-bg-contrast);
 }
 
@@ -93,12 +92,12 @@ button:focus {
     transition: background-color 0.2s ease-in-out,
                 transform 0.2s ease-in-out,
                 opacity 0.2s ease-in-out;
-    background-color: var(--navbar-text-color);
+    background-color: var(--withe-blue-color);
 }
 
-.navbar-toggle:focus .icon-bar,
+/*.navbar-toggle:focus .icon-bar,*/
 .navbar-toggle:hover .icon-bar {
-    background: linear-gradient(90deg, rgba(0,102,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: var(--bright-blue-color);
 }
 
 #navbar.opened .navbar-toggle .icon-bar:first-child,
