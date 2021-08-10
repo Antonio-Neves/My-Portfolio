@@ -7,13 +7,17 @@
     flex-basis: auto;
 }
 
+.anime-text_p {
+    color: rgb(10,212,250);
+}
+
 .anime-text {
     position: absolute;
     overflow: hidden;
     font-family: "Roboto", sans-serif;
     font-size: 2rem;
     line-height: var(--line-height);
-    color: #ecf0f1;
+    color: rgb(10,250,212);
 }
 
 .anime-text-container {

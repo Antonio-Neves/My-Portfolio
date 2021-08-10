@@ -53,11 +53,11 @@ p {
     margin: 0;
 }
 
-.container-intro-home p {
-    color: #81d4fa;
-    /*background-color: rgba(16,45,105, 0.4);*/
-    /*padding-bottom: 1rem;*/
-}
+/*.container-intro-home p {*/
+/*    color: #81d4fa;*/
+/*    !*background-color: rgba(16,45,105, 0.4);*!*/
+/*    !*padding-bottom: 1rem;*!*/
+/*}*/
 
 /*****************************/
 /* Principal Containers      */
