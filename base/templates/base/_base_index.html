@@ -1,14 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
     {% include 'base/_base_head.html' %}
 </head>
-<body id="top">
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
+<body>
     <!-- Content -->
     {% block body_content %}{% endblock %}
     <!-- Scripts -->
