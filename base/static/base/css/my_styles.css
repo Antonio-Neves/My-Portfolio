@@ -135,7 +135,7 @@ p {
     align-content: flex-start;
     width: 100%;
     height: auto;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     background-image: url(../images/about-me-texture.jpg);
     background-size:cover;
 }
