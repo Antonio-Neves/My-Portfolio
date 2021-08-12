@@ -1,4 +1,4 @@
-# My Portfolio and My Blog
+# My CV, Portfolio and My Blog
 
 Developed with:
 <ul>
@@ -7,5 +7,4 @@ Developed with:
   <li> Postgresql </li>
   <li> HTML </li>
   <li> CSS </li>
-  <li> Bootstrap </li>
 </ul>
