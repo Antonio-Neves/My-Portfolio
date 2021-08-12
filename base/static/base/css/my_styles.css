@@ -55,27 +55,45 @@ p {
     /*border: 1px solid black;*/
 }
 
-.p-container p {
-    margin-bottom: 1.6rem;
-}
+/*.p-container p {*/
+/*    margin-bottom: 1.6rem;*/
+/*}*/
 
-.h2-container {
+.h2-container,
+.h3-container {
     display: flex;
     height: auto;
-    padding-bottom: 1rem;
     flex: 100%;
 }
 
-.h2-content {
+.h2-container {
+    padding-bottom: 1rem;
+}
+
+.h3-container {
+    /*padding-bottom: .3rem;*/
+}
+
+.h2-content,
+.h3-content {
     font-size: 3rem;
     color: #003366;
     font-weight: 400;
 }
 
-.h2-content::after {
+.h2-content {
+    font-size: 3rem;
+}
+
+.h3-content {
+    font-size: 2rem;
+}
+
+.h2-content::after,
+.h3-content::after {
     content: "";
     display: block;
-    width: 150%;
+    width: 100%;
     height: 1px;
     background-color: var(--yellow-color);
     left: 0;
@@ -87,8 +105,11 @@ p {
     .h2-content {
         font-size: 2rem;
     }
-}
 
+    .h3-content {
+        font-size: 1.5rem;
+    }
+}
 
 
 /*****************************/
@@ -153,9 +174,11 @@ p {
     align-content: flex-start;
     width: 100%;
     height: auto;
+    min-height: 700px;
     padding: 2.5rem 0 3.5rem 0;
     background-image: url(../images/about-me-texture.jpg);
     background-size:cover;
+    flex-wrap: wrap;
 }
 
 .about-me-container {
@@ -165,7 +188,7 @@ p {
     justify-content: space-between;
     width: 70%;
     height: auto;
-    min-height: 700px;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -176,16 +199,30 @@ p {
 }
 
 .p-box-img {
-    flex: 20%;
-    width: 20%;
+    flex: 25%;
+    width: 25%;
     border-radius: 5px;
-    margin: 1.3rem 0 0 10%;
+    margin: 1.3rem 0 2rem 5%;
     box-shadow: 5px 5px 8px #888888;
     order: 2;
 }
 
 .box {
     width: 45%;
+}
+
+.box-about-me-50 {
+    width: 50%;
+}
+
+.box-about-me-25 {
+    width: 25%;
+}
+
+.box-about-me-100 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* Responsive About Me */
@@ -196,7 +233,9 @@ p {
         height: 90%;
     }
 
-    .box {
+    .box,
+    .box-about-me-50,
+    .box-about-me-25 {
         width: 100%;
     }
 
