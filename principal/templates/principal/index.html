@@ -1,4 +1,5 @@
 {% extends 'base/_base_index.html' %}
+{% load static %}
 {% block title %}Antonio Neves{% endblock %}
 <!-- Body -->
 {% block body_content %}
@@ -11,7 +12,7 @@
             <h1 class="h1-intro-home">António Calheiros Neves</h1>
             <div class="anime-text-flex-container">
                 <div class="anime-text-flex-item">
-                    <p class="anime-text_p">
+                    <p class="anime-text-p">
                         Web Systems Developer
                     </p>
                 </div>
@@ -37,7 +38,7 @@
         <div class="h2-container">
             <h2 class="h2-content">About Me</h2>
         </div>
-        <div class="p-container">
+        <div class="p-container p-box-about">
             <p>
                 Since 2019 I study and develop personal web and desktop projects with Python and Django, with the intention of changing my professional career and improving myself more and more so that I can work as a programmer, be part of a development team, contribute to more advanced projects and have the possibility of increasing responsibilities and participation to generate value for an employer or a customer.
             </p>
@@ -45,10 +46,12 @@
                 Since 2004 to the end of 2018, I worked as a Freelancer, creating management systems in Excel and performing IT services.
             </p>
         </div>
+        <img class="p-box-img" src="{% static 'base/images/my_photo.jpg' %}" alt="My Photo">
+
     </div>
 </section>
 
-<section id="s-about-me">
+<section id="s-skills">
     <div class="about-me-container">
         <div class="h2-container">
             <h2 class="h2-content">Skills</h2>
@@ -62,6 +65,18 @@
             </p>
         </div>
         <div class="p-container box">
+            <p>
+                Since 2019 I study and develop personal web and desktop projects with Python and Django, with the intention of changing my professional career and improving myself more and more so that I can work as a programmer, be part of a development team, contribute to more advanced projects and have the possibility of increasing responsibilities and participation to generate value for an employer or a customer.
+            </p>
+            <p>
+                Since 2004 to the end of 2018, I worked as a Freelancer, creating management systems in Excel and performing IT services.
+            </p>
+            <p>
+                Since 2019 I study and develop personal web and desktop projects with Python and Django, with the intention of changing my professional career and improving myself more and more so that I can work as a programmer, be part of a development team, contribute to more advanced projects and have the possibility of increasing responsibilities and participation to generate value for an employer or a customer.
+            </p>
+            <p>
+                Since 2004 to the end of 2018, I worked as a Freelancer, creating management systems in Excel and performing IT services.
+            </p>
             <p>
                 Since 2019 I study and develop personal web and desktop projects with Python and Django, with the intention of changing my professional career and improving myself more and more so that I can work as a programmer, be part of a development team, contribute to more advanced projects and have the possibility of increasing responsibilities and participation to generate value for an employer or a customer.
             </p>
