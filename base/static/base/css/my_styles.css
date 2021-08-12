@@ -1,3 +1,14 @@
+/*****************************/
+/* Root                      */
+/* Typography                */
+/* Home                      */
+/*     Intro                 */
+/*     About Me              */
+/* Copyright                 */
+/* Scroll to Top             */
+/*****************************/
+
+
 :root {
     --navbar-height: 75px;
     --navbar-bg-color: transparent;
@@ -20,7 +31,7 @@
 }
 
 /*****************************/
-/* typography                */
+/* Typography                */
 /*****************************/
 
 h1, h2, h3, h4 {
@@ -205,7 +216,6 @@ p {
 }
 
 
-
 /*****************************/
 /* Principal Containers      */
 /*****************************/
@@ -362,25 +372,33 @@ p {
 /*}*/
 
 
-/*!*****************************!*/
-/*!* Copyright                 *!*/
-/*!*****************************!*/
+/********************************/
+/* Copyright                    */
+/********************************/
 
-#copyright {
+.copyright {
     position: relative;
+    height: 40px;
+    color: var(--bright-blue-color);
+    line-height: 40px;
     text-align: center;
-    color: rgba(0, 0, 0,.5);
-    padding: 5px 0;
+    background-color: #01050D;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /*font-size: 1.2rem;*/
+    /*padding: 5px 0;*/
+    /*border-top: 1px solid black;*/
+    /*box-shadow: 0 -5px 8px #d9edf7;*/
 }
 
-#copyright .container {
-    padding: 2em 0;
-    border-top: 1px solid;
-    border-color: rgba(255,255,255,.1);
-    /*color:  rgba(255,255,255,.8);*/
-}
+/*#copyright .container {*/
+/*    padding: 2em 0;*/
+/*    border-top: 1px solid;*/
+/*    border-color: rgba(0,0,0,.1);*/
+/*    !*color:  rgba(255,255,255,.8);*!*/
+/*}*/
 
-#copyright a {
+.copyright a {
     font-family: Quicksand, sans-serif;
     font-weight: 400;
     text-decoration: none;
