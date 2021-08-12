@@ -7,9 +7,9 @@
     flex-basis: auto;
 }
 
-.anime-text_p {
-    color: var(--bright-blue-color);
-}
+/*.anime-text-p {*/
+/*    color: var(--bright-blue-color);*/
+/*}*/
 
 .anime-text {
     position: absolute;
@@ -54,7 +54,8 @@
     animation-iteration-count: infinite;
 }
 
-.anime-text_p {
+.anime-text-p {
+    color: var(--bright-blue-color);
     font-family: "Roboto", sans-serif;
     font-size: 2rem;
     line-height: var(--line-height);
@@ -86,7 +87,7 @@
 
 /* makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-    .anime-text_p {
+    .anime-text-p {
         padding-left: 2%;
     }
 
@@ -98,7 +99,7 @@
 }
 
 @media (max-width: 500px) {
-    .anime-text_p {
+    .anime-text-p {
         padding-left: 2%;
         font-size: 1.5rem;
     }
