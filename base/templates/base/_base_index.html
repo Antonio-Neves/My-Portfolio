@@ -5,7 +5,9 @@
     <title>{% block title %}{% endblock %}</title>
     {% include 'base/_base_head.html' %}
 </head>
-<body>
+<body id="base-body">
+    <!-- Go to Top -->
+    <button class="gototop"></button>
     <!-- Content -->
     {% block body_content %}{% endblock %}
     <!-- Scripts -->
