@@ -4,6 +4,7 @@
 /* Home                      */
 /*     Intro                 */
 /*     About Me              */
+/*     Call to Action        */
 /* Copyright                 */
 /* Scroll to Top             */
 /*****************************/
@@ -37,6 +38,10 @@
 h1, h2, h3, h4 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
 }
 
 p {
@@ -207,9 +212,9 @@ p {
     order: 2;
 }
 
-.box {
-    width: 45%;
-}
+/*.box {*/
+/*    width: 45%;*/
+/*}*/
 
 .box-about-me-50 {
     width: 50%;
@@ -252,6 +257,113 @@ p {
         order: 1;
     }
 
+}
+
+
+/*****************************/
+/* Call to Action            */
+/*****************************/
+
+#call-action {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40vh;
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
+    background-size:cover;
+
+}
+
+.call-action-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 100%;
+}
+
+.call-action-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    /*margin: 0 5%;*/
+    border-radius: 5px;
+    background: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: var(--white-blue-color);
+}
+
+.call-action-box-01{
+    align-items: flex-end;
+}
+
+.call-action-box-02{
+    align-items: center;
+}
+
+.call-action-box a {
+    margin: 0 1%;
+}
+
+.call-action-box i {
+    font-size: 2rem;
+    color: var(--white-blue-color);
+}
+
+.call-action-box i:hover {
+    color: var(--bright-blue-color);
+    transition: color 0.3s ;
+}
+
+.a-btn-25 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 50%;
+    margin: 0 5%;
+    border: 2px solid var(--white-blue-color);
+    border-radius: 5px;
+    background: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: var(--white-blue-color);
+}
+
+.a-btn-25:hover {
+    border-color: var(--bright-blue-color);
+    color: var(--bright-blue-color);
+    transition: color 0.3s ;
+}
+
+
+/* @media buttons */
+@media (max-width: 800px) {
+
+    #call-action {
+        height: 25vh;
+    }
+
+    .call-action-container {
+        width: 100%;
+        /*text-wrap: inherit;*/
+    }
+
+    .a-btn-25 {
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    .call-action-box a {
+    margin: 0 3%;
+    }
 }
 
 
