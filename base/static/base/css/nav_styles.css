@@ -25,7 +25,7 @@
 .navbar-container a, span {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    color: var(--navbar-text-color);
+    color: var(--white-perl-color);
     /* offset-x | offset-y | blur-radius | color */
     /*text-shadow: 1px 1px 2px black;*/
     text-decoration: none;
@@ -33,11 +33,9 @@
 }
 
 .navbar-container a i {
-    /*color: var(--navbar-text-color);*/
-    color: rgb(195,200,215);
+    color: var(--white-perl-color);
     margin-right: .7rem;
     margin-top: .4rem;
-    /*text-shadow: 1px 1px 2px black;*/
     text-decoration: none;
     font-size: 1.8rem;
 }
@@ -105,7 +103,7 @@
     transition: background-color 0.2s ease-in-out,
                 transform 0.2s ease-in-out,
                 opacity 0.2s ease-in-out;
-    background-color: rgba(195,200,215);
+    background-color: var(--white-perl-color);
 }
 
 .navbar-toggle:focus .icon-bar,
@@ -174,6 +172,11 @@
 @media screen and (max-width: 500px) {
     .navbar-container a, span {
         font-size: 1rem;
+    }
+
+    .navbar-container a {
+        margin-right: 0.2rem;
+        margin-top: -0.3rem;
     }
 }
 
