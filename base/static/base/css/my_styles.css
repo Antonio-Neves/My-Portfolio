@@ -4,7 +4,8 @@
 /* Home                      */
 /*     Intro                 */
 /*     About Me              */
-/*     Call to Action        */
+/*         Call to Action    */
+/*     Skills                */
 /* Copyright                 */
 /* Scroll to Top             */
 /*****************************/
@@ -60,10 +61,6 @@ p {
     /*flex: 100%;*/
     /*border: 1px solid black;*/
 }
-
-/*.p-container p {*/
-/*    margin-bottom: 1.6rem;*/
-/*}*/
 
 .h2-container,
 .h3-container {
@@ -171,7 +168,7 @@ p {
 }
 
 /*****************************/
-/* About Me                  */
+/* About Me | Skills         */
 /*****************************/
 
 #s-about-me, #s-skills {
@@ -198,6 +195,17 @@ p {
     flex-wrap: wrap;
 }
 
+.skills-container {
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: start;
+    width: 70%;
+    height: auto;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
 .p-box-about {
     flex: 70%;
     width: 70%;
@@ -212,10 +220,6 @@ p {
     box-shadow: 5px 5px 8px #888888;
     order: 2;
 }
-
-/*.box {*/
-/*    width: 45%;*/
-/*}*/
 
 .box-about-me-50 {
     width: 50%;
@@ -343,8 +347,7 @@ p {
     transition: color 0.3s ;
 }
 
-
-/* @media buttons */
+/* @media call to action */
 @media (max-width: 800px) {
 
     #call-action {
@@ -365,6 +368,67 @@ p {
     margin: 0 3%;
     }
 }
+
+
+/*****************************/
+/* Skills                    */
+/*****************************/
+
+/*.skills-container {*/
+/*    display: flex;*/
+/*    align-content: flex-start;*/
+/*    align-items: flex-start;*/
+/*    justify-content: start;*/
+/*    width: 70%;*/
+/*    height: auto;*/
+/*    margin-bottom: 2rem;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.box-about-me-50 {*/
+/*    width: 50%;*/
+/*}*/
+
+/*.box-about-me-25 {*/
+/*    width: 25%;*/
+/*}*/
+
+/*.box-about-me-100 {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    width: 100%;*/
+/*}*/
+
+/*!* Responsive About Me *!*/
+/*@media (max-width: 800px) {*/
+
+/*    .about-me-container {*/
+/*        width: 90%;*/
+/*        height: 90%;*/
+/*    }*/
+
+/*    .box,*/
+/*    .box-about-me-50,*/
+/*    .box-about-me-25 {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .p-box-about {*/
+/*        flex: 100%;*/
+/*        !*width: 70%;*!*/
+/*        order: 2;*/
+/*    }*/
+
+/*    .p-box-img {*/
+/*        flex: 100%;*/
+/*        width: 20%;*/
+/*        margin: 2.5rem 25%;*/
+/*        order: 1;*/
+/*    }*/
+
+/*}*/
+
+
 
 
 /*****************************/
