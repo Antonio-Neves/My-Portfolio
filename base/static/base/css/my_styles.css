@@ -259,50 +259,6 @@ p {
     box-shadow: 5px 5px 8px #888888;
 }
 
-/*.skills-container {*/
-/*    display: flex;*/
-/*    align-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    justify-content: start;*/
-/*    width: 70%;*/
-/*    height: auto;*/
-/*    margin-bottom: 4rem;*/
-/*    flex-wrap: wrap;*/
-/*}*/
-
-/*.p-box-about {*/
-/*    flex: 70%;*/
-/*    !*width: 70%;*!*/
-/*    order: 1;*/
-/*}*/
-
-/*.about-me-container img {*/
-/*    width: 50%;*/
-/*}*/
-
-/*.p-box-img {*/
-/*    flex: 30%;*/
-/*    !*width: 30%;*!*/
-/*    border-radius: 5px;*/
-/*    !*margin: 1.3rem 0 2rem 5%;*!*/
-/*    box-shadow: 5px 5px 8px #888888;*/
-/*    order: 2;*/
-/*}*/
-
-/*.box-about-me-50 {*/
-/*    width: 50%;*/
-/*}*/
-
-/*.box-about-me-25 {*/
-/*    width: 25%;*/
-/*}*/
-
-/*.box-about-me-100 {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    width: 100%;*/
-/*}*/
-
 /* Responsive About Me */
 @media (max-width: 1000px) {
 
@@ -348,27 +304,6 @@ p {
     }
 }
 
-/*    .box,*/
-/*    .box-about-me-50,*/
-/*    .box-about-me-25 {*/
-/*        width: 100%;*/
-/*    }*/
-
-/*    .p-box-about {*/
-/*        flex: 100%;*/
-/*        !*width: 70%;*!*/
-/*        order: 2;*/
-/*    }*/
-
-/*    .p-box-img {*/
-/*        flex: 100%;*/
-/*        width: 20%;*/
-/*        margin: 2.5rem 25%;*/
-/*        order: 1;*/
-/*    }*/
-
-/*}*/
-
 
 /*****************************/
 /* Call to Action            */
@@ -408,14 +343,9 @@ p {
     color: var(--white-perl-color);
 }
 
-.call-action-box p,
-.call-action-box p i {
-    font-size: 1.8rem;
+.call-action-box p {
+    font-size: 1.5rem;
 }
-
-/*.call-action-box p i {*/
-/*    font-size: 1.8rem;*/
-/*}*/
 
 .call-action-box-01{
     align-items: flex-end;
@@ -429,7 +359,7 @@ p {
     margin: 0 1%;
 }
 
-.call-action-box i {
+.call-action-box a i {
     font-size: 2.3rem;
     color: var(--white-perl-color);
 }
@@ -438,6 +368,15 @@ p {
     color: var(--bright-blue-color);
     transition: color 0.3s ;
 }
+
+.call-action-box a .fa-blog {
+    font-size: 1.9rem;
+}
+
+.call-action-box .fa-envelope-square {
+    font-size: 2.1rem;
+}
+
 
 .a-btn-25 {
     display: flex;
@@ -482,10 +421,6 @@ p {
     margin: 0 3%;
     }
 
-    .call-action-box p,
-    .call-action-box p i {
-        font-size: 1.2rem;
-    }
 }
 
 

@@ -40,6 +40,10 @@
     font-size: 1.8rem;
 }
 
+.navbar-container a .fa-blog {
+    font-size: 1.6rem;
+}
+
 .navbar-container a i:hover {
     color: var(--navbar-text-color-focus);
     background-color: var(--navbar-bg-contrast);
