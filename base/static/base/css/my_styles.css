@@ -312,6 +312,7 @@ p {
     }
 
     .box-width-25,
+    .box-width-33,
     .box-width-40,
     .about-box-30,
     .about-box-70 {
@@ -319,8 +320,16 @@ p {
         flex: 100%;
    }
 
-    .box-padd-25 {
-        padding-left: 0;
+    .media-center {
+        justify-content: center;
+    }
+
+    .about-img {
+        width: 25%;
+    }
+
+    .box-padd-r-15 {
+        padding-right: 0;
     }
 
     .box-order-1 {
@@ -330,9 +339,12 @@ p {
 
 @media (max-width: 700px) {
 
-
     .box-width-50 {
         width: 100%
+    }
+
+    .about-img {
+        width: 50%;
     }
 }
 
