@@ -581,9 +581,9 @@ p {
 		padding-right: 50px;
 	}
 
-	.timeline-header h3 {
-		font-size: 1.8rem;
-	}
+	/*.timeline-header h3 {*/
+	/*	font-size: 1.8rem;*/
+	/*}*/
 
 	/*.timeline-header p {*/
 	/*	font-size: 1.4rem;*/
@@ -609,9 +609,9 @@ p {
 		text-align: left;
 	}
 
-	.timeline-header h3 {
-		font-size: 2rem;
-	}
+	/*.timeline-header h3 {*/
+	/*	font-size: 2rem;*/
+	/*}*/
 
 	/*.timeline-header p {*/
 	/*	font-size: 1.5rem;*/
@@ -622,17 +622,17 @@ p {
 		margin: 0;
 	}
 
-	.timeline-content h4 {
-		padding-bottom: 0;
-		padding-top: 2.1rem;
-		margin-bottom: .6rem;
-		font-size: 1.7rem;
-	}
+	/*.timeline-content h4 {*/
+	/*	padding-bottom: 0;*/
+	/*	padding-top: 2.1rem;*/
+	/*	margin-bottom: .6rem;*/
+	/*	font-size: 1.7rem;*/
+	/*}*/
 
-	.timeline-content h4::after {
-		bottom: auto;
-		top: 0;
-	}
+	/*.timeline-content h4::after {*/
+	/*	bottom: auto;*/
+	/*	top: 0;*/
+	/*}*/
 
 	.timeline-header,
     .timeline-content {
@@ -640,12 +640,14 @@ p {
 	}
 }
 @media only screen and (max-width:480px) {
-	.work-experience-header h2 {
-		font-size: 2.2rem;
-	}
+	/*.work-experience-header h2 {*/
+	/*	font-size: 2.2rem;*/
+	/*}*/
+
 	.timeline-wrap::before {
 		left: 1.8rem;
 	}
+
 	.timeline-ico {
 		height: 3.6rem;
 		width: 3.6rem;
@@ -654,6 +656,7 @@ p {
 		margin-left: -1.8rem;
 		font-size: 1.5rem;
 	}
+
 	.timeline-header,
     .timeline-content {
 		padding-left: 5.5rem;
