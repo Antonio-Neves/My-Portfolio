@@ -443,7 +443,7 @@ p {
 /* Work Experience           */
 /*****************************/
 
-#work-experience {
+#s-work-experience {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -455,10 +455,6 @@ p {
     background-size:cover;
     flex-wrap: wrap;
 }
-
-/*.work-experience-timeline {*/
-/*	max-width: 980px;*/
-/*}*/
 
 .timeline-wrap {
 	position: relative;
@@ -536,10 +532,6 @@ p {
 	background: #003366;
 	border-radius: 10%;
     margin-right: 1rem;
-	/*position: absolute;*/
-	/*left: 36%;*/
-	/*top: .9rem;*/
-	/*margin-left: -2.4rem;*/
 }
 
 .timeline-ico-small i {
@@ -601,30 +593,9 @@ p {
 		text-align: left;
 	}
 
-	/*.timeline-header h3 {*/
-	/*	font-size: 2rem;*/
-	/*}*/
-
-	/*.timeline-header p {*/
-	/*	font-size: 1.5rem;*/
-	/*	margin-bottom: 1.5rem;*/
-	/*}*/
-
 	.timeline-content {
 		margin: 0;
 	}
-
-	/*.timeline-content h4 {*/
-	/*	padding-bottom: 0;*/
-	/*	padding-top: 2.1rem;*/
-	/*	margin-bottom: .6rem;*/
-	/*	font-size: 1.7rem;*/
-	/*}*/
-
-	/*.timeline-content h4::after {*/
-	/*	bottom: auto;*/
-	/*	top: 0;*/
-	/*}*/
 
 	.timeline-header,
     .timeline-content {
@@ -632,9 +603,6 @@ p {
 	}
 }
 @media only screen and (max-width:480px) {
-	/*.work-experience-header h2 {*/
-	/*	font-size: 2.2rem;*/
-	/*}*/
 
 	.timeline-wrap::before {
 		left: 1.8rem;
