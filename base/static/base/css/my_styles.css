@@ -622,6 +622,10 @@ p {
     margin-bottom: 1.5rem;
 }
 
+.portfolio-first-child {
+    margin-top: 1.5rem;
+}
+
 .portfolio-icons-box {
     display: flex;
     justify-content: left;
