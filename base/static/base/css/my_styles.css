@@ -122,6 +122,18 @@ p {
 /*****************************/
 /* Containers                */
 /*****************************/
+.container-section-big {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    padding: 3rem 0 2.5rem 0;
+    background-image: url(../images/about-me-texture.jpg);
+    background-size:cover;
+    flex-wrap: wrap;
+}
 
 .container-flex-w70 {
     display: flex;
@@ -140,6 +152,11 @@ p {
 
 .box-width-33 {
     width: 33%;
+    margin-bottom: 0.5rem;
+}
+
+.box-width-40 {
+    width: 40%;
     margin-bottom: 0.5rem;
 }
 
@@ -253,18 +270,18 @@ p {
 /* About Me | Skills         */
 /*****************************/
 
-#s-about-me {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: auto;
-    min-height: 700px;
-    padding: 2rem 0 2.5rem 0;
-    background-image: url(../images/about-me-texture.jpg);
-    background-size:cover;
-    flex-wrap: wrap;
-}
+/*#s-about-me {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: flex-start;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    min-height: 700px;*/
+/*    padding: 2rem 0 2.5rem 0;*/
+/*    background-image: url(../images/about-me-texture.jpg);*/
+/*    background-size:cover;*/
+/*    flex-wrap: wrap;*/
+/*}*/
 
 .about-box-70 {
     display: flex;
@@ -444,23 +461,10 @@ p {
 /* Work Experience           */
 /*****************************/
 
-#s-work-experience {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: auto;
-    min-height: 700px;
-    padding: 2rem 0 2.5rem 0;
-    background-image: url(../images/about-me-texture.jpg);
-    background-size:cover;
-    flex-wrap: wrap;
-}
-
 .timeline-wrap {
 	position: relative;
-	margin-top: 1.5rem;
-	margin-bottom: 6rem;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
 }
 
 .timeline-wrap::before {
@@ -478,6 +482,10 @@ p {
 	position: relative;
 	padding-top: 0.7rem;
     padding-bottom: 2.5rem;
+}
+
+.timeline-wrap .timeline-block:last-child {
+    padding-bottom: 0;
 }
 
 .timeline-ico {
@@ -606,6 +614,80 @@ p {
     .timeline-content {
 		padding-left: 5.5rem;
 	}
+}
+
+/********************************/
+/* Portfolio                    */
+/********************************/
+
+.container-section-big {
+    background-image: none;
+}
+
+#s-portfolio .box-flex {
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-icons-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.portfolio-img {
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #888888;
+}
+
+#s-portfolio .box-width-40 {
+    padding: 1rem 0 1rem 2rem;
+}
+
+/* @media Portfolio */
+@media (max-width:1000px) {
+
+    #s-portfolio .box-width-60 {
+        width: 60%;
+        flex: 60%
+    }
+
+    #s-portfolio .box-width-40 {
+        width: 40%;
+        flex: 40%;
+    }
+}
+
+@media (max-width:600px) {
+
+    #s-portfolio .box-flex {
+        margin-bottom: 0;
+    }
+
+    #s-portfolio .h3-container {
+        flex-wrap: wrap;
+    }
+
+    #s-portfolio .box-width-40 {
+        width: 100%;
+        flex: 100%;
+        padding: 1rem 0 1rem 0;
+    }
+
+    #s-portfolio .box-width-60 {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .portfolio-icons-box {
+        flex: 100%;
+    }
+
+    .portfolio-img {
+        margin: 0;
+    }
 }
 
 

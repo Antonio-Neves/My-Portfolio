@@ -33,7 +33,7 @@
     </div>
 </header>
 <!-- About me -->
-<section id="s-about-me">
+<section id="s-about-me" class="container-section-big">
     <div class="container-flex-w70">
         <div class="h2-container">
             <h2 class="h2-content">About Me</h2>
@@ -237,12 +237,12 @@
     </div>
 </section>
 <!-- Work Experience -->
-<section id="s-work-experience">
+<section id="s-work-experience" class="container-section-big">
     <div class="container-flex-w70">
         <div class="h2-container">
             <h2 class="h2-content">Work Experience</h2>
         </div>
-        <div class="col-twelve">
+{#        <div class="col-twelve">#}
             <div class="timeline-wrap">
                 <div class="timeline-block">
                     <div class="timeline-ico">
@@ -431,7 +431,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+{#        </div>#}
     </div>
 </section>
 <!-- Call to Action -->
@@ -453,5 +453,85 @@
         </div>
     </div>
 </section>
-
+<!-- Portfolio -->
+<section id="s-portfolio" class="container-section-big">
+    <div class="container-flex-w70">
+        <div class="h2-container">
+            <h2 class="h2-content">Portfolio</h2>
+        </div>
+        <!-- School Management System -->
+        <div class="box-flex">
+            <div class="h3-container">
+                <h3 class="h3-content">School Management System</h3>
+            </div>
+            <div class="box-flex box-width-100">
+                <div class="box-width-60">
+                    <a href="https://gestao-escolar-an.herokuapp.com/" target="_blank" rel="noreferrer noopener">
+                        <img class="portfolio-img"
+                             src="https://res.cloudinary.com/myportfolioan/image/upload/v1629833230/site_photos/GestaoEscolar-768x379_aowihf.png?auto=format&fit=crop"
+                             alt="School Management System">
+                    </a>
+                </div>
+                <div class="box-width-40">
+                    <p>
+                        Complete Web System for school management.
+                        (under development)
+                    </p>
+                    <br>
+                    <p>
+                        Technologies: Python, Django, Html, Css, Postgresql and Bootstrap4
+                    </p>
+                    <div class="portfolio-icons-box">
+                        <div class="timeline-ico-small">
+                            <a href="https://gestao-escolar-an.herokuapp.com/" target="_blank" rel="noreferrer noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                        <div class="timeline-ico-small">
+                            <a href="https://github.com/Antonio-Neves/Gestao-Escolar" target="_blank" rel="noreferrer noopener">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- My Portfolio -->
+        <div class="box-flex">
+            <div class="h3-container">
+                <h3 class="h3-content">My CV, Portfolio and Blog</h3>
+            </div>
+            <div class="box-flex box-width-100">
+                <div class="box-width-60">
+                    <a href="https://gestao-escolar-an.herokuapp.com/" target="_blank" rel="noreferrer noopener">
+                        <img class="portfolio-img"
+                             src="https://res.cloudinary.com/myportfolioan/image/upload/v1628561602/site_photos/my_portfolio_an_seo_hjkf5o.jpg?auto=format&fit=crop"
+                             alt="School Management System">
+                    </a>
+                </div>
+                <div class="box-width-40">
+                    <p>
+                        My Cv, Portfolio and Blog.
+                    </p>
+                    <br>
+                    <p>
+                        Technologies: Python, Django, Html, Css and Postgresql
+                    </p>
+                    <div class="portfolio-icons-box">
+                        <div class="timeline-ico-small">
+                            <a href="https://gestao-escolar-an.herokuapp.com/" target="_blank" rel="noreferrer noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                        <div class="timeline-ico-small">
+                            <a href="https://github.com/Antonio-Neves/Gestao-Escolar" target="_blank" rel="noreferrer noopener">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
