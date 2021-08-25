@@ -636,6 +636,10 @@ p {
     box-shadow: 5px 5px 8px #888888;
 }
 
+.portfolio-img-no-shadow {
+    box-shadow: none;
+}
+
 #s-portfolio .box-width-40 {
     padding: 1rem 0 1rem 2rem;
 }
