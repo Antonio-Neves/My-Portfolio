@@ -7,6 +7,8 @@
 /*     About Me / Skills     */
 /*     Call to Action        */
 /*     Work Experience       */
+/*     Portfolio             */
+/* Footer                    */
 /* Copyright                 */
 /* Scroll to Top             */
 /*                           */
@@ -265,6 +267,7 @@ p {
         font-size: 4rem;
     }
 }
+
 
 /*****************************/
 /* About Me | Skills         */
@@ -564,6 +567,7 @@ p {
 		padding-left: 50px;
 	}
 }
+
 @media only screen and (max-width:768px) {
 	.timeline-wrap::before {
 		left: 2.4rem;
@@ -589,6 +593,7 @@ p {
 		padding-left: 7rem;
 	}
 }
+
 @media only screen and (max-width:480px) {
 
 	.timeline-wrap::before {
@@ -609,6 +614,7 @@ p {
 		padding-left: 5.5rem;
 	}
 }
+
 
 /********************************/
 /* Portfolio                    */
