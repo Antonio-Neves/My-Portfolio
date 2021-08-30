@@ -259,12 +259,10 @@ p {
 
 .scroll-me p {
     color: var(--bright-blue-color);
-    /*opacity: 0.6;*/
 }
 
 .scroll-me p i {
     color: var(--yellow-color);
-    /*font-weight: 300;*/
     font-size: 0.8rem;
     -webkit-animation-name: opacity;
     -webkit-animation-duration: 2s;
@@ -288,6 +286,10 @@ p {
     .h1-intro-home {
         padding-left: 1%;
         font-size: 4rem;
+    }
+
+    .scroll-me {
+        bottom: .5rem;
     }
 }
 
