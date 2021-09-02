@@ -733,7 +733,7 @@ p {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: 3rem 0 1rem 0;
     background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
@@ -743,6 +743,10 @@ p {
 #footer .box-width-50,
 #footer .box-width-100 {
     margin-bottom: 1.5rem;
+}
+
+#footer .container-flex-w70 {
+    margin-bottom: 0;
 }
 
 #footer .h3-container {
@@ -821,10 +825,12 @@ p {
 }
 
 /* Responsive Footer */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
 
     .order1 {
         order: 1;
+        margin-top: 1rem;
+        margin-bottom: 0;
     }
 
     .box-width-50 {
@@ -844,7 +850,9 @@ p {
     align-items: center;
     width: 100%;
     height: auto;
+    padding: 1rem 0;
     background-color: transparent;
+    flex-wrap: wrap;
 }
 
 #copyright p {
@@ -854,12 +862,24 @@ p {
     text-align: center;
     color: var(--bright-blue-color);
     margin-left: 0;
+    /*margin-right: 1rem;*/
 }
 
 #copyright p i {
     font-size: 1rem;
     text-align: center;
     color: var(--yellow-color);
+}
+
+#copyright a {
+    margin-left: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 800px) {
+   #copyright p{
+       width: 100%;
+   }
 }
 
 
