@@ -9,7 +9,7 @@
 /*     Work Experience       */
 /*     Portfolio             */
 /* Footer                    */
-/* Copyright                 */
+/*     Copyright             */
 /* Scroll to Top             */
 /*                           */
 /*****************************/
@@ -231,7 +231,7 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
     background-size:cover;
 }
 
@@ -725,29 +725,138 @@ p {
 
 
 /********************************/
+/* Footer                       */
+/********************************/
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 3rem 0 1rem 0;
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
+    background-size:cover;
+    flex-wrap: wrap;
+}
+
+#footer .box-width-50,
+#footer .box-width-100 {
+    margin-bottom: 1.5rem;
+}
+
+#footer .h3-container {
+    margin-bottom: 1.5rem;
+}
+
+.footer-h3-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-h3-flex div {
+    width: 1.5rem;
+}
+
+#footer h2,
+#footer h3 {
+    color: var(--bright-blue-color);
+}
+
+#footer i {
+    color: var(--yellow-color);
+    font-size: 1.1rem;
+    line-height: 0;
+}
+
+#footer p {
+    color: var(--white-perl-color);
+    margin-left: 1.5rem;
+}
+
+.form-box-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.footer-input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--white-perl-color);
+    border:none;
+    outline: none;
+    border-bottom: 1px solid var(--yellow-color);
+    background-color: transparent;
+    width: 100%;
+}
+
+.footer-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--white-perl-color);
+    opacity: 1; /* Firefox */
+}
+
+.footer-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-weight: 300;
+    color: var(--white-perl-color);
+}
+
+.footer-input::-ms-input-placeholder { /* Microsoft Edge */
+    font-weight: 300;
+    color: var(--white-perl-color);
+}
+
+.footer-input:focus::placeholder {
+    color: transparent;
+}
+
+.footer-input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--bright-blue-color);
+}
+
+/* Responsive Footer */
+@media (max-width: 1000px) {
+
+    .order1 {
+        order: 1;
+    }
+
+    .box-width-50 {
+        width: 100%;
+        flex: 100%;
+    }
+}
+
+
+/********************************/
 /* Copyright                    */
 /********************************/
 
-.copyright {
+#copyright {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1% 0;
-    position: relative;
+    width: 100%;
     height: auto;
-    background-color: #01050D;
-
+    background-color: transparent;
 }
 
-.copyright p {
+#copyright p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     text-align: center;
     color: var(--bright-blue-color);
+    margin-left: 0;
 }
 
-.copyright p i {
+#copyright p i {
     font-size: 1rem;
     text-align: center;
     color: var(--yellow-color);
