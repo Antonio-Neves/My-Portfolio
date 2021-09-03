@@ -43,10 +43,13 @@
             </div>
         </div>
         <div class="box-flex box-width-50">
+            {% include 'base/_messages.html' %}
             <div class="h3-container">
                 <h3 class="h3-content">Contact me</h3>
             </div>
-            <form>
+{#            <form id="contact-form" onsubmit="return false">#}
+            <form id="contact-form">
+                {% csrf_token %}
                 <div class="form-box-flex">
                     <input class="footer-input" type="text"
                            name="contact_name" id="contact_name"
@@ -58,7 +61,10 @@
                            required="required"  placeholder="Email">
                 </div>
                 <div class="form-box-flex">
-                    <textarea class="footer-input" name="contact_message" id="contact_message" placeholder="Message" rows="10" required="required"></textarea>
+                    <textarea class="footer-input" name="contact_message" id="contact_message" placeholder="Message" required="required"></textarea>
+                </div>
+                <div class="form-box-flex">
+                    <button class="contact-form-button" type="submit" onclick="hide_contact_form()">Send</button>
                 </div>
             </form>
         </div>

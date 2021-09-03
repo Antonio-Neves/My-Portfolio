@@ -42,6 +42,36 @@ navbarMenu.addEventListener("click", closeMobileNavbar);
 
 
 //
+// --- Hide form after submit ---
+///
+function hide_contact_form() {
+    $('#contact-form').submit(function () {
+        $(this).hide();
+    })
+}
+
+hide_contact_form();
+
+//
+// --- Avoid page reload after submit ---
+//
+$(function () {
+    $('#contact-form').on('submit',function (e) {
+
+              $.ajax({
+                // type: 'post',
+                // url: '/',
+                data: $('#contact-form').serialize(),
+                success: function () {
+                 alert("Thank you! Your message has been sent!");
+                }
+              });
+          e.preventDefault();
+        });
+});
+
+
+//
 // --- Scroll to Top ---
 //
 const btn = $('.gototop');
