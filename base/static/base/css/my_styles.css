@@ -909,21 +909,30 @@ p {
     /*margin-right: 1rem;*/
 }
 
-#copyright p i {
-    font-size: 1rem;
+#copyright a i {
+    font-size: 1.5rem;
     text-align: center;
     color: var(--yellow-color);
 }
 
+#copyright a i:hover {
+    color: var(--bright-blue-color);
+}
+
 #copyright a {
-    margin-left: 1rem;
+    margin-left: .7rem;
 }
 
 /* Responsive Footer */
 @media (max-width: 800px) {
-   #copyright p{
-       width: 100%;
-   }
+    #copyright p {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #copyright {
+        margin-top: 0;
+    }
 }
 
 
