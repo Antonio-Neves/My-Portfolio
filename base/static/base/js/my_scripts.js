@@ -55,15 +55,20 @@ hide_contact_form();
 //
 // --- Avoid page reload after submit ---
 //
+const contactMessage = document.getElementById('contact-message');
+
 $(function () {
     $('#contact-form').on('submit',function (e) {
 
               $.ajax({
-                // type: 'post',
-                // url: '/',
+                type: 'post',
                 data: $('#contact-form').serialize(),
                 success: function () {
-                 alert("Thank you! Your message has been sent!");
+                    const messageElement = `
+                        <p>Thank you.</p>
+                        <p>Your message has been sent.</p>
+                    `;
+                    contactMessage.innerHTML += messageElement;
                 }
               });
           e.preventDefault();
