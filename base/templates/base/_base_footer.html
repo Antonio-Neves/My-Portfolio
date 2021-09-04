@@ -43,12 +43,13 @@
             </div>
         </div>
         <div class="box-flex box-width-50">
-            {% include 'base/_messages.html' %}
             <div class="h3-container">
                 <h3 class="h3-content">Contact me</h3>
             </div>
-{#            <form id="contact-form" onsubmit="return false">#}
-            <form id="contact-form">
+            <div id="contact-message">
+            </div>
+            <!-- Contact Form -->
+            <form id="contact-form" method="post" action="">
                 {% csrf_token %}
                 <div class="form-box-flex">
                     <input class="footer-input" type="text"
