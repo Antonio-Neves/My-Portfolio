@@ -53,16 +53,16 @@
                 {% csrf_token %}
                 <div class="form-box-flex">
                     <input class="footer-input" type="text"
-                           name="contact_name" id="contact_name"
+                           name="contact_name" id="contact_name" maxlength="100"
                            size="100" required="required" placeholder="Name">
                 </div>
                 <div class="form-box-flex">
                     <input class="footer-input" type="email"
-                           name="contact_email" id="contact_email"
+                           name="contact_email" id="contact_email" maxlength="100"
                            required="required"  placeholder="Email">
                 </div>
                 <div class="form-box-flex">
-                    <textarea class="footer-input" name="contact_message" id="contact_message" placeholder="Message" required="required"></textarea>
+                    <textarea class="footer-input" name="contact_message" id="contact_message" placeholder="Message" maxlength="1000" required="required"></textarea>
                 </div>
                 <div class="form-box-flex">
                     <button class="contact-form-button" type="submit" onclick="hide_contact_form()">Send</button>
