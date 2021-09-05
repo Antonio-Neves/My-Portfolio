@@ -15,10 +15,10 @@ class IndexView(FormView):
 
 	def form_valid(self, form, *args, **kwargs):
 		form.send_mail()
-		return super(IndexView, self).form_valid(form, *args, **kwargs)
+		return super(IndexView, self).form_valid(form)
 
 	def form_invalid(self, form, *args, **kwargs):
-		return super(IndexView, self).form_invalid(form, *args, **kwargs)
+		return super(IndexView, self).form_invalid(form)
 
 
 # --- Download CV --- #
