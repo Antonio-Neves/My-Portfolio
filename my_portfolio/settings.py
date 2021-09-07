@@ -64,6 +64,7 @@ INSTALLED_APPS = [
 
 	# --- system apps --- #
 	'base',
+	'blog',
 	'principal',
 ]
 
