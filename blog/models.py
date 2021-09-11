@@ -2,11 +2,6 @@ from django.db import models
 from django.urls import reverse
 
 
-class BaseModel(models.Model):
-	created_at = models.DateTimeField(auto_now_add=True)
-	modified_at = models.DateTimeField(auto_now=True)
-
-
 # --- Category --- #
 class Category(models.Model):
 	category_id = models.AutoField(primary_key=True)
@@ -23,7 +18,7 @@ class Category(models.Model):
 
 
 # --- Tags --- #
-class SubCategory(BaseModel):
+class SubCategory(models.Model):
 	sub_category_id = models.AutoField(primary_key=True)
 	sub_category_name = models.CharField(
 		'Sub Category', max_length=100, unique=True
@@ -40,7 +35,7 @@ class SubCategory(BaseModel):
 
 
 # --- Article --- #
-class Article(BaseModel):
+class Article(models.Model):
 
 	ARTICLE_STATUS = (
 		('0', 'Draft'),
@@ -48,13 +43,16 @@ class Article(BaseModel):
 	)
 
 	article_id = models.AutoField(primary_key=True)
+	article_image = models.ImageField('Image', upload_to='articles/')
 	article_cat = models.ForeignKey(
-		Category, related_name='articlecategory', on_delete=models.CASCADE)
+		Category, verbose_name='Category', related_name='articlecategory', on_delete=models.CASCADE)
 	article_sub_cat = models.ManyToManyField(
-		SubCategory, related_name='articlesubcategory', on_delete=models.CASCADE)
+		SubCategory, verbose_name='Tags', related_name='articlesubcategory')
 	article_name = models.CharField('Name', max_length=100, unique=True)
 	article_slug = models.SlugField(max_length=150, unique=True)
 	article_content = models.TextField()
+	created_at = models.DateTimeField(auto_now_add=True)
+	modified_at = models.DateTimeField(auto_now=True)
 	article_status = models.CharField(
 		max_length=1, choices=ARTICLE_STATUS, default=0
 	)
