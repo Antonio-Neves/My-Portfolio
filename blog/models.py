@@ -50,6 +50,7 @@ class Article(models.Model):
 		SubCategory, verbose_name='Tags', related_name='articlesubcategory')
 	article_name = models.CharField('Name', max_length=100, unique=True)
 	article_slug = models.SlugField(max_length=150, unique=True)
+	article_resume = models.CharField('Resume', max_length=200)
 	article_content = models.TextField()
 	created_at = models.DateTimeField(auto_now_add=True)
 	modified_at = models.DateTimeField(auto_now=True)
