@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-
+    <img src="{{ object.article_image.url }}">
+    <!-- Main Content -->
+    <div class="article-content">
+        {{ object.article_content | safe }}
+    </div>
 </body>
 </html>
