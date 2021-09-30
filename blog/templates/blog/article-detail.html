@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <img src="{{ object.article_image.url }}">
-    <!-- Main Content -->
-    <div class="article-content">
-        {{ object.article_content | safe }}
+{% extends 'base/_base_index.html' %}
+{% load static %}
+{% block title %}Antonio Neves - Article{% endblock %}
+<!-- Body -->
+{% block body_content %}
+    <div class="image-article-div">
+        <img class="image-article" src="{{ object.article_image.url }}" alt="{{ object.article_name }} image">
     </div>
-</body>
-</html>
+    <!-- Main Content -->
+    <section id="article" class="container-section-big">
+        <div class="container-flex-w80 article-content wordwrap">
+            <h1>Como instalar várias versões Python no Windows 10</h1>
+            {{ object.article_content | safe }}
+        </div>
+    </section>
+{% endblock %}
