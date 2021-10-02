@@ -1,49 +1,7 @@
-//
-// --- Navbar ---
-//
-const navbar = document.getElementById("navbar");
-const navbarToggle = navbar.querySelector(".navbar-toggle");
-const navbarLinks = navbar.querySelector(".navbar-links");
-
-function openMobileNavbar() {
-  navbar.classList.add("opened");
-  navbarToggle.setAttribute("aria-label", "Close navigation menu.");
-}
-
-function closeMobileNavbar() {
-  navbar.classList.remove("opened");
-  navbarToggle.setAttribute("aria-label", "Open navigation menu.");
-}
-
-navbarToggle.addEventListener("click", () => {
-  if (navbar.classList.contains("opened")) {
-    closeMobileNavbar();
-  } else {
-    openMobileNavbar();
-  }
-});
-
-navbarLinks.addEventListener("click", () => {
-    if (navbar.classList.contains("opened")) {
-    closeMobileNavbar();
-  } else {
-    openMobileNavbar();
-  }
-});
-
-const navbarMenu = navbar.querySelector(".navbar-menu");
-const navbarLinksContainer = navbar.querySelector(".navbar-links");
-
-navbarLinksContainer.addEventListener("click", (clickEvent) => {
-  clickEvent.stopPropagation();
-});
-
-navbarMenu.addEventListener("click", closeMobileNavbar);
-
 
 //
 // --- Hide form after submit ---
-///
+//
 function hide_contact_form() {
     $('#contact-form').submit(function () {
         $(this).hide();
@@ -115,3 +73,46 @@ window.cookieconsent.initialise({
     "dismiss": "OK"
   }
 });
+
+
+//
+// --- Navbar ---
+//
+const navbar = document.getElementById("navbar");
+const navbarToggle = navbar.querySelector(".navbar-toggle");
+const navbarLinks = navbar.querySelector(".navbar-links");
+
+function openMobileNavbar() {
+  navbar.classList.add("opened");
+  navbarToggle.setAttribute("aria-label", "Close navigation menu.");
+}
+
+function closeMobileNavbar() {
+  navbar.classList.remove("opened");
+  navbarToggle.setAttribute("aria-label", "Open navigation menu.");
+}
+
+navbarToggle.addEventListener("click", () => {
+  if (navbar.classList.contains("opened")) {
+    closeMobileNavbar();
+  } else {
+    openMobileNavbar();
+  }
+});
+
+navbarLinks.addEventListener("click", () => {
+    if (navbar.classList.contains("opened")) {
+    closeMobileNavbar();
+  } else {
+    openMobileNavbar();
+  }
+});
+
+const navbarMenu = navbar.querySelector(".navbar-menu");
+const navbarLinksContainer = navbar.querySelector(".navbar-links");
+
+navbarLinksContainer.addEventListener("click", (clickEvent) => {
+  clickEvent.stopPropagation();
+});
+
+navbarMenu.addEventListener("click", closeMobileNavbar);
