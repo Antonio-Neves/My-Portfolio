@@ -12,9 +12,11 @@ class ArticleDetailView(DetailView, FormView):
 	model = Article
 	slug_field = 'article_slug'
 	template_name = 'blog/article-detail.html'
+	# --- Attributes for FormView --- #
 	form_class = ContactForm
 	success_url = reverse_lazy('index')
 
+	# --- Functions for contact form in page footer --- #
 	def form_valid(self, form, *args, **kwargs):
 		form.send_mail()
 		return super(ArticleDetailView, self).form_valid(form)
