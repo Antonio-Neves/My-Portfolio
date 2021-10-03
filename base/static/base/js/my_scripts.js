@@ -1,40 +1,3 @@
-
-//
-// --- Hide form after submit ---
-//
-function hide_contact_form() {
-    $('#contact-form').submit(function () {
-        $(this).hide();
-    })
-}
-
-hide_contact_form();
-
-
-//
-// --- Avoid page reload after submit ---
-//
-const contactMessage = document.getElementById('contact-message');
-
-$(function () {
-    $('#contact-form').on('submit',function (e) {
-
-        $.ajax({
-            type: 'post',
-            data: $('#contact-form').serialize(),
-            success: function () {
-                const messageElement = `
-                    <p>Thank you.</p>
-                    <p>Your message has been sent.</p>
-                `;
-                contactMessage.innerHTML += messageElement;
-            }
-        });
-        e.preventDefault();
-    });
-});
-
-
 //
 // --- Scroll to Top ---
 //
@@ -72,6 +35,42 @@ window.cookieconsent.initialise({
   "content": {
     "dismiss": "OK"
   }
+});
+
+
+//
+// --- Hide form after submit ---
+//
+function hide_contact_form() {
+    $('#contact-form').submit(function () {
+        $(this).hide();
+    })
+}
+
+hide_contact_form();
+
+
+//
+// --- Avoid page reload after submit ---
+//
+const contactMessage = document.getElementById('contact-message');
+
+$(function () {
+    $('#contact-form').on('submit',function (e) {
+
+        $.ajax({
+            type: 'post',
+            data: $('#contact-form').serialize(),
+            success: function () {
+                const messageElement = `
+                    <p>Thank you.</p>
+                    <p>Your message has been sent.</p>
+                `;
+                contactMessage.innerHTML += messageElement;
+            }
+        });
+        e.preventDefault();
+    });
 });
 
 
