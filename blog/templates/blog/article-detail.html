@@ -3,6 +3,8 @@
 {% block title %}Antonio Neves - Article{% endblock %}
 <!-- Body -->
 {% block body_content %}
+    <!-- Nav -->
+    {% include 'base/_base_nav_blog.html' %}
     <div class="image-article-div">
         <img class="image-article" src="{{ object.article_image.url }}" alt="{{ object.article_name }} image">
     </div>
