@@ -26,8 +26,6 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     color: var(--white-perl-color);
-    /* offset-x | offset-y | blur-radius | color */
-    /*text-shadow: 1px 1px 2px black;*/
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -181,6 +179,26 @@
     .navbar-container a {
         margin-right: 0.2rem;
         margin-top: -0.3rem;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    #navbar {
+        right: 0;
+        left: auto;
+        height: auto;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        padding-right: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .navbar-container a i {
+        margin-top: .6rem;
     }
 }
 
