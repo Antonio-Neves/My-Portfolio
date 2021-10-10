@@ -1,25 +1,11 @@
-from django.shortcuts import render
-from django.urls import reverse_lazy, reverse
-from django.views.generic import FormView
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import DetailView
+from base.views import ContactFormView
 
-from principal.forms import ContactForm
-from blog.models import Category, SubCategory, Article
+from blog.models import Article
 
 
 # --- Articles --- #
-class ArticleDetailView(DetailView, FormView):
+class ArticleDetailView(DetailView, ContactFormView):
 	model = Article
 	slug_field = 'article_slug'
 	template_name = 'blog/article-detail.html'
-	# --- Attributes for FormView --- #
-	form_class = ContactForm
-	success_url = reverse_lazy('index')
-
-	# --- Functions for contact form in page footer --- #
-	def form_valid(self, form, *args, **kwargs):
-		form.send_mail()
-		return super(ArticleDetailView, self).form_valid(form)
-
-	def form_invalid(self, form, *args, **kwargs):
-		return super(ArticleDetailView, self).form_invalid(form)
