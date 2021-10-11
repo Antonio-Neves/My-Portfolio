@@ -61,7 +61,7 @@ class Article(models.Model):
 	class Meta:
 		verbose_name = 'Article'
 		verbose_name_plural = 'Articles'
-		ordering = ['article_name']
+		ordering = ['created_at']
 
 	def get_absolute_url(self):
 		return reverse('article-detail', args=[self.article_slug])
