@@ -38,6 +38,10 @@
     font-size: 1.8rem;
 }
 
+.navbar-blog a i {
+    color: var(--white-blue-color);
+}
+
 .navbar-container a .fa-blog {
     font-size: 1.6rem;
 }
