@@ -1086,6 +1086,11 @@ p {
     border-radius: 5px;
 }
 
+.article-content a {
+    font-weight: 400;
+    color: var(--blue-dark-color);
+}
+
 /* Article */
 @media (max-width: 800px) {
 
