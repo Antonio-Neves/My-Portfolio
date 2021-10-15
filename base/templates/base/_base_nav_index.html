@@ -11,7 +11,7 @@
         <a href="https://www.youtube.com/channel/UCrJ78GVGuJnyjDCikZEl1Ng" target="_blank" rel="noreferrer noopener">
             <i class="fab fa-youtube-square"></i>
         </a>
-        <a class="icon-last" href="#" target="_blank" rel="noreferrer noopener">
+        <a class="icon-last" href="{% url 'blog' %}" target="_blank" rel="noreferrer noopener">
             <i class="fas fa-blog"></i>
         </a>
         <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
@@ -21,12 +21,12 @@
         </button>
         <div class="navbar-menu">
             <ul class="navbar-links">
-                <li class="navbar-item"><a class="navbar-link" href="#">Blog</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#s-about-me">About</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#s-skills">Skills</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#s-work-experience">Experience</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#s-portfolio">Portfolio</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#footer">Contact</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="{% url 'blog' %}" target="_blank" rel="noreferrer noopener">Blog</a></li>
             </ul>
         </div>
     </nav>
