@@ -1,9 +1,15 @@
 from django.http import Http404
 
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from base.views import ContactFormView
 
 from blog.models import Article
+
+
+# --- Blog Home --- #
+class BlogHomeView(ListView, ContactFormView):
+	model = Article
+	template_name = 'blog/blog.html'
 
 
 # --- Articles --- #
