@@ -254,8 +254,12 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
     background-size:cover;
+}
+
+.intro-image-home {
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
+
 }
 
 .container-intro-home {
@@ -1016,6 +1020,23 @@ p {
 /* Blog                      */
 /*****************************/
 
+.intro-image-blog {
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1634253296/site_photos/blog_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
+
+}
+
+.intro-blog-text {
+    text-align: right;
+    font-size: 5rem;
+    margin-top: 2rem;
+    color: var(--bright-blue-color);
+}
+
+@media (max-width: 1000px) {
+    .intro-blog-text {
+        text-align: left;
+    }
+}
 
 /*****************************/
 /* Article                   */

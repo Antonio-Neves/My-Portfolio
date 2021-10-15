@@ -194,11 +194,18 @@
         height: auto;
     }
 
+    .navbar-container {
+        margin-top: 1rem;
+    }
+
     .navbar-blog {
         flex-direction: column;
         padding-right: 0.5rem;
-        padding-top: 1rem;
     }
+
+   .navbar-principal-blog .navbar-blog {
+       flex-direction: row;
+   }
 
     .navbar-container a i {
         margin-top: .6rem;
