@@ -1,0 +1,21 @@
+{% extends 'base/_base_index.html' %}
+{% load static %}
+{% block title %}António Neves - Blog{% endblock %}
+{% block body_content %}
+<header>
+    <!-- Nav -->
+    <div class="navbar-principal-blog">
+        {% include 'base/_base_nav_blog.html' %}
+    </div>
+    <!-- Intro -->
+    <div class="intro-home intro-image-blog">
+        <div class="container-intro-home">
+            <h1 class="h1-intro-home">António Calheiros Neves</h1>
+            <p class="intro-blog-text">Blog</p>
+        </div>
+    </div>
+</header>
+    {% for post in object_list %}
+        <p>{{ post.article_name }}</p>
+    {% endfor %}
+{% endblock %}
