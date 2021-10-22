@@ -16,6 +16,8 @@
     </div>
 </header>
     {% for post in object_list %}
-        <p>{{ post.article_name }}</p>
+        <div>
+        <a href="{% url 'article-detail' post.article_slug %}">{{ post.article_name }}</a>
+        </div>
     {% endfor %}
 {% endblock %}
