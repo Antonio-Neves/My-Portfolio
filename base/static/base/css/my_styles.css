@@ -315,7 +315,7 @@ p {
     }
 
     .scroll-me {
-        bottom: .2rem;
+        bottom: .5rem;
     }
 }
 
@@ -1021,7 +1021,6 @@ p {
 
 .intro-image-blog {
     background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1634253296/site_photos/blog_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
-
 }
 
 .intro-blog-text {
@@ -1031,16 +1030,60 @@ p {
     color: var(--bright-blue-color);
 }
 
-#s-blog-list .container-flex-w70 {
+#s-blog-list {
+    padding-top: 6rem;
+}
+
+#s-blog-list .container-flex-w80 {
     justify-content: space-between;
 }
 
-.container-article {
+.container-article-card {
     display: flex;
     width: 30%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    /*border: 1px solid blanchedalmond;*/
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #888888;
+    flex-wrap: wrap;
 }
 
+.image-article-card {
+    width: 100%;
+}
+
+.image-article-card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.title-article-card {
+    width: 100%;
+    color: var(--blue-dark-color);
+}
+
+.title-article-card h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+}
+
+.title-article-card p {
+    padding: 1rem 1rem;
+}
+
+.article-modified-card {
+    font-size: .8rem;
+    text-align: right;
+}
+
+.container-article-card:hover {
+    box-shadow: 5px 5px 8px #888888;
+    /*transition: width 0.2s ease-in;*/
+}
+
+/* Responsive Blog */
 @media (max-width: 1000px) {
     .intro-blog-text {
         text-align: left;
@@ -1048,7 +1091,7 @@ p {
 }
 
 @media (max-width: 600px) {
-    .container-article {
+    .container-article-card {
         width: 100%;
     }
 }
@@ -1127,7 +1170,7 @@ p {
     color: var(--blue-dark-color);
 }
 
-/* Article */
+/* Responsive Article */
 @media (max-width: 800px) {
 
     .article-content img {

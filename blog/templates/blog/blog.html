@@ -15,9 +15,26 @@
         </div>
     </div>
 </header>
+<section id="s-blog-list" class="container-section-big">
+    <div class="container-flex-w80">
     {% for post in object_list %}
-        <div>
-        <a href="{% url 'article-detail' post.article_slug %}">{{ post.article_name }}</a>
+        <div class="container-article-card">
+            <a href="{% url 'article-detail' post.article_slug %}">
+            <div class="image-article-card">
+                <img src="{{ post.article_image.url }}" alt="{{ post.article_name }} image">
+            </div>
+            <div class="title-article-card">
+                <h3>{{ post.article_name }}</h3>
+            </div>
+            <div class="title-article-card">
+                <p>{{ post.article_resume }}</p>
+            </div>
+            <div class="title-article-card">
+                <p class="article-modified-card">Modified at: {{ post.modified_at | date:'M d Y' }}</p>
+            </div>
+            </a>
         </div>
     {% endfor %}
+    </div>
+</section>
 {% endblock %}
