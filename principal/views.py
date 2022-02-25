@@ -13,7 +13,7 @@ class IndexView(TemplateView, ContactFormView):
 
 # --- Download CV --- #
 def download_cv(request):
-	file_path = BASE_DIR / 'files/Cv_Antonio_Neves_2021.pdf'
+	file_path = BASE_DIR / 'files/Cv_Antonio_Neves_2022.pdf'
 
 	response = FileResponse(open(file_path, 'rb'))
 
