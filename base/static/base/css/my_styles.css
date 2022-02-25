@@ -1176,6 +1176,13 @@ p {
     color: var(--blue-dark-color);
 }
 
+.article-modified-h3 {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--blue-dark-color);
+}
+
 /* Responsive Article */
 @media (max-width: 800px) {
 
