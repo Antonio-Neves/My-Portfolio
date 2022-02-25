@@ -58,6 +58,8 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
+	'django.contrib.sitemaps',
+	'django.contrib.sites',
 
 	# --- Extra Apps --- #
 	'django_summernote',
@@ -67,6 +69,8 @@ INSTALLED_APPS = [
 	'blog',
 	'principal',
 ]
+
+SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
 if not DEBUG:
@@ -220,7 +224,6 @@ if not DEBUG:
 
 	DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-
 # ----------------------------------------------------------
 # --- Email --- #
 
@@ -242,18 +245,15 @@ if not DEBUG:
 	ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
 	MANAGERS = ADMINS
 
-
 # ----------------------------------------------------------
 # --- Custom User Model --- #
 AUTH_USER_MODEL = 'accounts.CustomUser'
-
 
 # ----------------------------------------------------------
 # --- Login Logout User --- #
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
-
 
 # ----------------------------------------------------------
 # Mensagens
@@ -264,7 +264,6 @@ MESSAGE_TAGS = {
 	constants.SUCCESS: 'alert-success',
 	constants.INFO: 'alert-info',
 }
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
