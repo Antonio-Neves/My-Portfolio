@@ -350,6 +350,21 @@ p {
     box-shadow: 5px 5px 8px #888888;
 }
 
+.about_me {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+.about_me:hover {
+    border-color: var(--bright-blue-color);
+    color: var(--bright-blue-color);
+    transition: color 0.3s ;
+}
+
 /* Responsive About Me */
 @media (max-width: 1000px) {
 
@@ -420,6 +435,22 @@ p {
 
 .call-action-box p {
     font-size: 1.5rem;
+}
+
+.call-action-box a {
+    color: var(--white-perl-color);
+    margin-left: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+.call-action-box a:hover {
+    border-color: var(--bright-blue-color);
+    color: var(--bright-blue-color);
+    transition: color 0.3s ;
 }
 
 .call-action-box-01{
@@ -493,6 +524,7 @@ p {
 
     .call-action-box a {
     margin: 0 3%;
+    font-size: 1rem;
     }
 
 }
@@ -803,6 +835,22 @@ p {
 #footer p {
     color: var(--white-perl-color);
     margin-left: 1.5rem;
+}
+
+#footer a {
+    color: var(--white-perl-color);
+    margin-left: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+#footer a:hover {
+    border-color: var(--bright-blue-color);
+    color: var(--bright-blue-color);
+    transition: color 0.3s ;
 }
 
 .form-box-flex {
