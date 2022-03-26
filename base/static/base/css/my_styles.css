@@ -1224,9 +1224,13 @@ p {
     color: var(--blue-dark-color);
 }
 
+.article-modified {
+    margin-top: 3rem;
+}
+
 .article-modified-h3 {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 1.2rem;
     color: var(--blue-dark-color);
 }

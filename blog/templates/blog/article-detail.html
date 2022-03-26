@@ -10,9 +10,18 @@
     </div>
     <!-- Main Content -->
     <section id="article" class="container-section-big">
-        <div class="container-flex-w80 article-content wordwrap">
+        <div class="container-flex-w80 article-content wordwrap article-modified">
             <h1>{{ object.article_name }}</h1>
             {{ object.article_content | safe }}
+            <div class="article-modified">
+                <h3 class="article-modified-h3">Created by: António Callheiros Neves</h3>
+                <h3 class="article-modified-h3">Modified at: {{ object.modified_at | date:'M d, Y' }}</h3>
+                <h3 class="article-modified-h3">
+                    {% for tag in object.article_sub_cat.all %}
+                        #{{ tag }}
+                    {% endfor %}
+                </h3>
+            </div>
         </div>
     </section>
 {% endblock %}
