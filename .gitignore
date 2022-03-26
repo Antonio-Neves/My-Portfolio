@@ -15,6 +15,7 @@ db.sqlite3
 
 # Virtualenv
 .venv
+.venvdj4
 
 # Folders
 media
