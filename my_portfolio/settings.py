@@ -31,11 +31,11 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # Allowed Hosts
 # --- development --- #
 if DEBUG:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = []
 
 # --- Production --- #
 if not DEBUG:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
 
 # ----------------------------------------------------------
 # SSL and Cookies
