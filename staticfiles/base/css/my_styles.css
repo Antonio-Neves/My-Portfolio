@@ -254,11 +254,11 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-size:cover;
+    /*background-size:cover;*/
 }
 
 .intro-image-home {
-    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1628517540/site_photos/home_photo_principal_1920x1080.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1667160932/site_photos/foto_principal_portfolio_2560x1440_xnzyxq.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
 }
 
 .container-intro-home {
