@@ -74,8 +74,8 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
-# if not DEBUG:
-INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+if not DEBUG:
+    INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -143,25 +143,16 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # --- PostgreSQL in Heroku--- #
 # --- Development --- #
 if DEBUG:
-    import dj_database_url
-
     DATABASES = {
-        'default': dj_database_url.config(
-            conn_max_age=600,
-            ssl_require=True
-        )
+    	'default': {
+    		'ENGINE': 'django.db.backends.postgresql',
+    		'NAME': config('NAME_DB'),
+    		'USER': config('USER_DB'),
+    		'PASSWORD': config('PASSWORD_DB'),
+    		'HOST': config('HOST_DB'),
+    		'PORT': config('PORT_DB'),
+    	}
     }
-
-    # DATABASES = {
-    # 	'default': {
-    # 		'ENGINE': 'django.db.backends.postgresql',
-    # 		'NAME': config('NAME_DB'),
-    # 		'USER': config('USER_DB'),
-    # 		'PASSWORD': config('PASSWORD_DB'),
-    # 		'HOST': config('HOST_DB'),
-    # 		'PORT': config('PORT_DB'),
-    # 	}
-    # }
 
 # --- Prodution --- #
 if not DEBUG:
@@ -217,15 +208,6 @@ if DEBUG:
     STATIC_ROOT = BASE_DIR / 'staticfiles'
     MEDIA_ROOT = BASE_DIR / 'media'
 
-    CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': config('CLOUD_NAME'),
-        'API_KEY': config('API_KEY'),
-        'API_SECRET': config('API_SECRET')
-    }
-
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
 # --- Production --- #
 if not DEBUG:
     # STATIC_ROOT = config('STATIC_ROOT')
@@ -244,22 +226,13 @@ if not DEBUG:
 
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+
 # ----------------------------------------------------------
 # --- Email --- #
 
 # --- development --- #
 if DEBUG:
-    # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    EMAIL_HOST = config('EMAIL_HOST')
-    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-    EMAIL_PORT = config('EMAIL_PORT', cast=int)
-    EMAIL_USE_SSL = True
-    # EMAIL_USE_TLS = True
-    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-
-    ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
-    MANAGERS = ADMINS
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # --- Production --- #
@@ -276,15 +249,18 @@ if not DEBUG:
     ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
     MANAGERS = ADMINS
 
+
 # ----------------------------------------------------------
 # --- Custom User Model --- #
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 # ----------------------------------------------------------
 # --- Login Logout User --- #
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+
 
 # ----------------------------------------------------------
 # Mensagens
@@ -295,6 +271,7 @@ MESSAGE_TAGS = {
     constants.SUCCESS: 'alert-success',
     constants.INFO: 'alert-info',
 }
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
