@@ -30,8 +30,8 @@ DEBUG = False
 # ----------------------------------------------------------
 # Allowed Hosts
 # --- development --- #
-if DEBUG:
-	ALLOWED_HOSTS = []
+# if DEBUG:
+# 	ALLOWED_HOSTS = []
 
 # --- Production --- #
 if not DEBUG:
