@@ -25,7 +25,7 @@ SECRET_KEY = config('SECRET_KEY')
 # ----------------------------------------------------------
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = True
+DEBUG = False
 
 # ----------------------------------------------------------
 # Allowed Hosts
@@ -41,10 +41,10 @@ if not DEBUG:
 # ----------------------------------------------------------
 # SSL and Cookies
 # ----- Production ----- #
-if not DEBUG:
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+# if not DEBUG:
+#     SECURE_SSL_REDIRECT = True
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
 
 # ----------------------------------------------------------
 # Application definition
@@ -75,8 +75,8 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
-# if not DEBUG:
-if DEBUG:
+if not DEBUG:
+# if DEBUG:
     INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
