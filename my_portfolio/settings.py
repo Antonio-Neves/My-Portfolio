@@ -41,7 +41,7 @@ if not DEBUG:
 # SSL and Cookies
 # ----- Production ----- #
 if not DEBUG:
-#     SECURE_SSL_REDIRECT = True
+    SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
 
@@ -242,7 +242,7 @@ if not DEBUG:
     EMAIL_HOST_USER = config('EMAIL_HOST_USER')
     EMAIL_PORT = config('EMAIL_PORT', cast=int)
     EMAIL_USE_SSL = True
-    EMAIL_USE_TLS = True
+    # EMAIL_USE_TLS = True
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
