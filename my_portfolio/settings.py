@@ -25,17 +25,17 @@ SECRET_KEY = config('SECRET_KEY')
 # ----------------------------------------------------------
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = False
+DEBUG = True
 
 # ----------------------------------------------------------
 # Allowed Hosts
 # --- development --- #
-# if DEBUG:
-# 	ALLOWED_HOSTS = []
+if DEBUG:
+	ALLOWED_HOSTS = ['*']
 
 # --- Production --- #
 if not DEBUG:
-	ALLOWED_HOSTS = ['*']
+	ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
 
 # ----------------------------------------------------------
 # SSL and Cookies
@@ -142,17 +142,17 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 
 # --- PostgreSQL in Heroku--- #
 # --- Development --- #
-# if DEBUG:
-# 	DATABASES = {
-# 		'default': {
-# 			'ENGINE': 'django.db.backends.postgresql',
-# 			'NAME': config('NAME_DB'),
-# 			'USER': config('USER_DB'),
-# 			'PASSWORD': config('PASSWORD_DB'),
-# 			'HOST': config('HOST_DB'),
-# 			'PORT': config('PORT_DB'),
-# 		}
-# 	}
+if DEBUG:
+	DATABASES = {
+		'default': {
+			'ENGINE': 'django.db.backends.postgresql',
+			'NAME': config('NAME_DB'),
+			'USER': config('USER_DB'),
+			'PASSWORD': config('PASSWORD_DB'),
+			'HOST': config('HOST_DB'),
+			'PORT': config('PORT_DB'),
+		}
+	}
 
 # --- Prodution --- #
 if not DEBUG:
@@ -204,10 +204,10 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 # --- development --- #
-# if DEBUG:
-# 	STATIC_ROOT = BASE_DIR / 'staticfiles'
-# 	MEDIA_ROOT = BASE_DIR / 'media'
-#
+if DEBUG:
+	STATIC_ROOT = BASE_DIR / 'staticfiles'
+	MEDIA_ROOT = BASE_DIR / 'media'
+
 # --- Production --- #
 if not DEBUG:
 	# STATIC_ROOT = config('STATIC_ROOT')
