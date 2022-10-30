@@ -74,8 +74,8 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
-if not DEBUG:
-    INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+# if not DEBUG:
+INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
