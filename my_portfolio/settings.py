@@ -40,10 +40,10 @@ if not DEBUG:
 # ----------------------------------------------------------
 # SSL and Cookies
 # ----- Production ----- #
-# if not DEBUG:
+if not DEBUG:
 #     SECURE_SSL_REDIRECT = True
-#     SESSION_COOKIE_SECURE = True
-#     CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # ----------------------------------------------------------
 # Application definition
