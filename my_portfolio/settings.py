@@ -34,7 +34,7 @@ if DEBUG:
 
 # --- Production --- #
 if not DEBUG:
-	ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
+	ALLOWED_HOSTS = ['*']
 
 # ----------------------------------------------------------
 # SSL and Cookies
