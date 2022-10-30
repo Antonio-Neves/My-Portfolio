@@ -24,71 +24,73 @@ SECRET_KEY = config('SECRET_KEY')
 
 # ----------------------------------------------------------
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+# DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
 # ----------------------------------------------------------
 # Allowed Hosts
 # --- development --- #
 if DEBUG:
-	ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['*']
 
 # --- Production --- #
 if not DEBUG:
-	ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
+    ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
 
 # ----------------------------------------------------------
 # SSL and Cookies
 # ----- Production ----- #
 if not DEBUG:
-	SECURE_SSL_REDIRECT = True
-	SESSION_COOKIE_SECURE = True
-	CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # ----------------------------------------------------------
 # Application definition
 
 INSTALLED_APPS = [
-	# --- Accounts --- #
-	'accounts',
+    # --- Accounts --- #
+    'accounts',
 
-	# --- Django Apps --- #
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-	'django.contrib.sitemaps',
-	'django.contrib.sites',
+    # --- Django Apps --- #
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
 
-	# --- Extra Apps --- #
-	'django_summernote',
+    # --- Extra Apps --- #
+    'django_summernote',
 
-	# --- system apps --- #
-	'base',
-	'blog',
-	'principal',
+    # --- system apps --- #
+    'base',
+    'blog',
+    'principal',
 ]
 
 SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
-if not DEBUG:
-	INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+# if not DEBUG:
+if DEBUG:
+    INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # ----------------------------------------------------------
 MIDDLEWARE = [
-	'django.middleware.security.SecurityMiddleware',
-	'whitenoise.middleware.WhiteNoiseMiddleware',
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 # ----------------------------------------------------------
@@ -96,19 +98,19 @@ ROOT_URLCONF = 'my_portfolio.urls'
 
 # ----------------------------------------------------------
 TEMPLATES = [
-	{
-		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': [],
-		'APP_DIRS': True,
-		'OPTIONS': {
-			'context_processors': [
-				'django.template.context_processors.debug',
-				'django.template.context_processors.request',
-				'django.contrib.auth.context_processors.auth',
-				'django.contrib.messages.context_processors.messages',
-			],
-		},
-	},
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
 
 # ----------------------------------------------------------
@@ -142,44 +144,53 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # --- PostgreSQL in Heroku--- #
 # --- Development --- #
 if DEBUG:
-	DATABASES = {
-		'default': {
-			'ENGINE': 'django.db.backends.postgresql',
-			'NAME': config('NAME_DB'),
-			'USER': config('USER_DB'),
-			'PASSWORD': config('PASSWORD_DB'),
-			'HOST': config('HOST_DB'),
-			'PORT': config('PORT_DB'),
-		}
-	}
+    import dj_database_url
+
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
+
+# DATABASES = {
+    # 	'default': {
+    # 		'ENGINE': 'django.db.backends.postgresql',
+    # 		'NAME': config('NAME_DB'),
+    # 		'USER': config('USER_DB'),
+    # 		'PASSWORD': config('PASSWORD_DB'),
+    # 		'HOST': config('HOST_DB'),
+    # 		'PORT': config('PORT_DB'),
+    # 	}
+    # }
 
 # --- Prodution --- #
 if not DEBUG:
-	import dj_database_url
+    import dj_database_url
 
-	DATABASES = {
-		'default': dj_database_url.config(
-			conn_max_age=600,
-			ssl_require=True
-		)
-	}
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-	{
-		'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-	},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 # Internationalization
@@ -204,47 +215,65 @@ MEDIA_URL = '/media/'
 
 # --- development --- #
 if DEBUG:
-	STATIC_ROOT = BASE_DIR / 'staticfiles'
-	MEDIA_ROOT = BASE_DIR / 'media'
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    MEDIA_ROOT = BASE_DIR / 'media'
+
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': config('CLOUD_NAME'),
+        'API_KEY': config('API_KEY'),
+        'API_SECRET': config('API_SECRET')
+    }
+
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # --- Production --- #
 if not DEBUG:
-	# STATIC_ROOT = config('STATIC_ROOT')
-	# MEDIA_ROOT = config('MEDIA_ROOT')
+    # STATIC_ROOT = config('STATIC_ROOT')
+    # MEDIA_ROOT = config('MEDIA_ROOT')
 
-	# --- For Heroku --- #
-	STATIC_ROOT = BASE_DIR / 'staticfiles'
-	MEDIA_ROOT = BASE_DIR / 'media'
+    # --- For Heroku --- #
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    MEDIA_ROOT = BASE_DIR / 'media'
 
-	# --- Only for use whit Cloudinary media files storage --- #
-	CLOUDINARY_STORAGE = {
-		'CLOUD_NAME': config('CLOUD_NAME'),
-		'API_KEY': config('API_KEY'),
-		'API_SECRET': config('API_SECRET')
-	}
+    # --- Only for use whit Cloudinary media files storage --- #
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': config('CLOUD_NAME'),
+        'API_KEY': config('API_KEY'),
+        'API_SECRET': config('API_SECRET')
+    }
 
-	DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # ----------------------------------------------------------
 # --- Email --- #
 
 # --- development --- #
 if DEBUG:
-	EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_HOST = config('EMAIL_HOST')
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_PORT = config('EMAIL_PORT', cast=int)
+    EMAIL_USE_SSL = True
+    # EMAIL_USE_TLS = True
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+
+    ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
+    MANAGERS = ADMINS
 
 # --- Production --- #
 if not DEBUG:
-	# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-	EMAIL_HOST = config('EMAIL_HOST')
-	EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-	EMAIL_PORT = config('EMAIL_PORT', cast=int)
-	EMAIL_USE_SSL = True
-	# EMAIL_USE_TLS = True
-	EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-	DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+    # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = config('EMAIL_HOST')
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_PORT = config('EMAIL_PORT', cast=int)
+    EMAIL_USE_SSL = True
+    # EMAIL_USE_TLS = True
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
-	ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
-	MANAGERS = ADMINS
+    ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
+    MANAGERS = ADMINS
 
 # ----------------------------------------------------------
 # --- Custom User Model --- #
@@ -259,11 +288,11 @@ LOGOUT_REDIRECT_URL = 'index'
 # ----------------------------------------------------------
 # Mensagens
 MESSAGE_TAGS = {
-	constants.ERROR: 'alert-danger',
-	constants.WARNING: 'alert-warning',
-	constants.DEBUG: 'alert-info',
-	constants.SUCCESS: 'alert-success',
-	constants.INFO: 'alert-info',
+    constants.ERROR: 'alert-danger',
+    constants.WARNING: 'alert-warning',
+    constants.DEBUG: 'alert-info',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info',
 }
 
 # Default primary key field type
