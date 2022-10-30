@@ -24,14 +24,13 @@ SECRET_KEY = config('SECRET_KEY')
 
 # ----------------------------------------------------------
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 # ----------------------------------------------------------
 # Allowed Hosts
 # --- development --- #
 if DEBUG:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = []
 
 # --- Production --- #
 if not DEBUG:
@@ -40,10 +39,10 @@ if not DEBUG:
 # ----------------------------------------------------------
 # SSL and Cookies
 # ----- Production ----- #
-# if not DEBUG:
+if not DEBUG:
     # SECURE_SSL_REDIRECT = True
-    # SESSION_COOKIE_SECURE = True
-    # CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # ----------------------------------------------------------
 # Application definition
@@ -74,8 +73,8 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
-if DEBUG:
-    INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+# if not DEBUG:
+INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -143,25 +142,25 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # --- PostgreSQL in Heroku--- #
 # --- Development --- #
 if DEBUG:
-    # DATABASES = {
-    # 	'default': {
-    # 		'ENGINE': 'django.db.backends.postgresql',
-    # 		'NAME': config('NAME_DB'),
-    # 		'USER': config('USER_DB'),
-    # 		'PASSWORD': config('PASSWORD_DB'),
-    # 		'HOST': config('HOST_DB'),
-    # 		'PORT': config('PORT_DB'),
-    # 	}
-    # }
-
-    import dj_database_url
-
     DATABASES = {
-        'default': dj_database_url.config(
-            conn_max_age=600,
-            ssl_require=True
-        )
+    	'default': {
+    		'ENGINE': 'django.db.backends.postgresql',
+    		'NAME': config('NAME_DB'),
+    		'USER': config('USER_DB'),
+    		'PASSWORD': config('PASSWORD_DB'),
+    		'HOST': config('HOST_DB'),
+    		'PORT': config('PORT_DB'),
+    	}
     }
+
+    # import dj_database_url
+    #
+    # DATABASES = {
+    #     'default': dj_database_url.config(
+    #         conn_max_age=600,
+    #         ssl_require=True
+    #     )
+    # }
 
 # --- Prodution --- #
 if not DEBUG:
