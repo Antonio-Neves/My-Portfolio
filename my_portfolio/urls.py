@@ -19,12 +19,21 @@ from django.conf import settings
 from django.conf.urls.static import static
 from decouple import config
 
+from django.contrib.sitemaps.views import sitemap
+from principal.sitemaps import BlogPostSitemap, StaticViewSitemap
+
 ADMIN_SITE = config('ADMIN_SITE')
+
+sitemaps = {
+    'posts': BlogPostSitemap,
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
 	path('accounts/', include('accounts.urls')),
 	path('', include('principal.urls')),
 	path('blog/', include('blog.urls')),
 	path('summernote/', include('django_summernote.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 	path(ADMIN_SITE, admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
