@@ -587,12 +587,12 @@ p {
 	text-align: left;
 }
 
-.timeline-header {
-	float: left;
-	width: 40%;
-	padding-right: 90px;
-	text-align: left;
-}
+/*.timeline-header {*/
+/*	float: left;*/
+/*	width: 40%;*/
+/*	padding-right: 90px;*/
+/*	text-align: left;*/
+/*}*/
 
 .timeline-header h3 {
 	margin-bottom: 0;
