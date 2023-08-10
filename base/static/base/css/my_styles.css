@@ -305,24 +305,24 @@ p {
 
 
 /* @media intro */
-@media screen and (max-width: 1000px) {
+/*@media screen and (max-width: 1000px) {*/
 
-    .container-intro-home {
-        padding-left: 5%;
-    }
-}
+/*    .container-intro-home {*/
+/*        padding-left: 5%;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 500px) {
+/*@media (max-width: 500px) {*/
 
-    .h1-intro-home {
-        padding-left: 1%;
-        font-size: 4rem;
-    }
+/*    .h1-intro-home {*/
+/*        padding-left: 1%;*/
+/*        font-size: 4rem;*/
+/*    }*/
 
-    .scroll-me {
-        bottom: .5rem;
-    }
-}
+/*    .scroll-me {*/
+/*        bottom: .5rem;*/
+/*    }*/
+/*}*/
 
 
 /*****************************/
