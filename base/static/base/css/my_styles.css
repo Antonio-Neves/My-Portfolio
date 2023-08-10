@@ -304,12 +304,12 @@ p {
 
 
 /* @media intro */
-@media screen and (max-width: 1000px) {
+/*@media screen and (max-width: 1000px) {*/
 
-    .container-intro-home {
-        padding-left: 5%;
-    }
-}
+/*    .container-intro-home {*/
+/*        padding-left: 5%;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 500px) {
 
