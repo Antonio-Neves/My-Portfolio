@@ -259,10 +259,6 @@ p {
 
 .intro-image-home {
     background: url(https://res.cloudinary.com/myportfolioan/image/upload/v1667160932/site_photos/foto_principal_portfolio_2560x1440_xnzyxq.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .container-intro-home {
