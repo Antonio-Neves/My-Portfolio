@@ -64,6 +64,7 @@ INSTALLED_APPS = [
 
     # --- Extra Apps --- #
     'django_summernote',
+	'django_recaptcha',
 
     # --- system apps --- #
     'base',
@@ -79,6 +80,11 @@ INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# --- Recaptcha Keys --- #
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
+
 
 # ----------------------------------------------------------
 MIDDLEWARE = [
