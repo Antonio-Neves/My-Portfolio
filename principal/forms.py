@@ -1,4 +1,6 @@
 from django import forms
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV2Checkbox
 from django.core.mail.message import EmailMessage
 from decouple import config
 
@@ -27,3 +29,11 @@ class ContactForm(forms.Form):
 			headers={'Reply-to': contact_email}
 		)
 		mail.send()
+
+	captcha = ReCaptchaField(
+		widget=ReCaptchaV2Checkbox(
+        attrs={
+            'data-theme': 'dark',
+            # 'data-size': 'compact',
+        })
+        )

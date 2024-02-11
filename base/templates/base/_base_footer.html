@@ -49,7 +49,7 @@
             <div id="contact-message">
             </div>
             <!-- Contact Form -->
-            <form id="contact-form" method="post" action="">
+            <form id="contact-form" method="post" action=""> <!-- onsubmit="alert('Olá do Form')" -->
                 {% csrf_token %}
                 <div class="form-box-flex">
                     <input class="footer-input" type="text"
@@ -64,11 +64,21 @@
                 <div class="form-box-flex">
                     <textarea class="footer-input" name="contact_message" id="contact_message" placeholder="Message" maxlength="1000" required="required"></textarea>
                 </div>
+                
                 <div class="form-box-flex">
                     <button class="contact-form-button" type="submit" name="contact_form_btn" onclick="hide_contact_form()">Send</button>
                 </div>
+                <div class="form-box-flex">
+                {{ form.captcha }}
+                    {% for error in form.captcha.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
             </form>
+            <div class="box-flex box-width-50">
         </div>
+        </div>
+        
     </div>
     <!-- Copyright -->
     <div id="copyright">
