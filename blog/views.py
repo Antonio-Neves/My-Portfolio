@@ -10,6 +10,7 @@ from blog.models import Article
 class BlogHomeView(ListView, ContactFormView):
 	model = Article
 	template_name = 'blog/blog.html'
+	queryset = Article.objects.filter(article_status='1')
 
 
 # --- Articles --- #
