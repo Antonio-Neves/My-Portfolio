@@ -21,3 +21,9 @@ Atenção:
 Para esconder valores sensiveis no arquivo settings.py, tais como direções e senhas utilizo Python Decouple.  
 Instruções em https://pypi.org/project/python-decouple/<br>
 No seu projecto, mude o nome do arquivo '.env.example' para '.env' e faça as alterações necessárias com os seus dados.
+
+<hr>
+
+<br><a href="https://antoniocalheirosneves.up.railway.app/" target="_blank">Live Preview</a>
+
+<br><a href="https://antoniocalheirosneves.up.railway.app/" target="_blank"><img src="https://res.cloudinary.com/myportfolioan/image/upload/v1628561602/site_photos/my_portfolio_an_seo_hjkf5o.jpg" style="width:640px;height:auto;"></a>
