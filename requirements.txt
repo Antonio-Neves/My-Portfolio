@@ -1,27 +1,27 @@
 asgiref
+bleach
 certifi
 charset-normalizer
 cloudinary
+dj-database-url
 Django
 django-cleanup
 django-cloudinary-storage
-# dj-database-url 0.5.0 for db credentials in Heroku
-dj-database-url
 django-recaptcha
 django-summernote
-idna
-Pillow
-# psycopg2-binary in development
-psycopg2-binary
-# psycopg2 for Heroku
-#psycopg2==2.9.1
-# Gunicorn for Heroku
 gunicorn
+idna
+packaging
+pillow
+psycopg2-binary
 python-decouple
-pytz
 requests
+setuptools
 six
 sqlparse
+typing_extensions
+tzdata
 Unidecode
 urllib3
+webencodings
 whitenoise
