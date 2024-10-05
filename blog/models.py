@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from cloudinary.models import CloudinaryField
 
 
 # --- Category --- #
@@ -43,7 +44,7 @@ class Article(models.Model):
 	)
 
 	article_id = models.AutoField(primary_key=True)
-	article_image = models.ImageField('Image', upload_to='articles/')
+	article_image = CloudinaryField('Image', folder='media/articles/')
 	article_cat = models.ForeignKey(
 		Category, verbose_name='Category', related_name='articlecategory', on_delete=models.CASCADE)
 	article_sub_cat = models.ManyToManyField(

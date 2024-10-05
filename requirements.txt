@@ -6,7 +6,6 @@ cloudinary
 dj-database-url
 Django
 django-cleanup
-django-cloudinary-storage
 django-recaptcha
 django-summernote
 gunicorn

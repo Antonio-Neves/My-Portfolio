@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from django.contrib.messages import constants
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # ----------------------------------------------------------
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,7 +79,7 @@ SITE_ID = 1
 
 # --- Only for use whit Cloudinary media files storage --- #
 # if not DEBUG:
-INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+# INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -221,12 +224,11 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# --- Only for use whit Cloudinary media files storage --- #
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME'),
-    'API_KEY': config('API_KEY'),
-    'API_SECRET': config('API_SECRET')
-}
+cloudinary.config(
+  	cloud_name = config('CLOUD_NAME'),
+  	api_key = config('API_KEY'),
+  	api_secret = config('API_SECRET')
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
