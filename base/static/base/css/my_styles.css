@@ -210,6 +210,10 @@ p {
     flex-wrap: wrap;
 }
 
+.box-flex-80 {
+    width: 80%;
+}
+
 /* Responsive containers */
 @media (max-width: 1000px) {
 
@@ -229,6 +233,10 @@ p {
     .box-padd-r-15 {
         padding-right: 0;
     }
+
+    .box-flex-80 {
+    width: 100%;
+    }
 }
 
 @media (max-width: 700px) {
@@ -236,7 +244,12 @@ p {
     .box-width-50 {
         width: 100%
     }
+
+    .box-flex-80 {
+    width: 100%;
+    }
 }
+
 
 
 /*****************************/
@@ -254,16 +267,11 @@ p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    /*background-size:cover;*/
 }
 
 .intro-image-home {
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727027098/MyPortfolio/foto_principal_portfolio_2560x1440.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
-    /*background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727027098/MyPortfolio/foto_principal_portfolio_2560x1440.jpg) #01050D no-repeat center center fixed;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #01050D no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container-intro-home {
@@ -411,9 +419,8 @@ p {
     flex-wrap: wrap;
     width: 100%;
     height: 50vh;
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727027098/MyPortfolio/foto_principal_portfolio_2560x1440.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
-
 }
 
 .call-action-container {
@@ -724,6 +731,7 @@ p {
     width: 100%;
     border-radius: 5px;
     box-shadow: 5px 5px 8px #888888;
+    object-fit: cover;
 }
 
 .portfolio-img-no-shadow {
@@ -790,7 +798,7 @@ p {
     width: 100%;
     height: auto;
     padding: 3rem 0 1rem 0;
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727027098/MyPortfolio/foto_principal_portfolio_2560x1440.jpg?auto=format&fit=crop&w=1491&q=80) #00003f no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
     flex-wrap: wrap;
 }
@@ -1065,7 +1073,7 @@ p {
 /*****************************/
 
 .intro-image-blog {
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727027098/MyPortfolio/foto_principal_portfolio_2560x1440.jpg?auto=format&fit=crop&w=1491&q=80) #01050D no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728209256/MyPortfolio/blog_photo_principal_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #01050D no-repeat center center fixed;
 }
 
 .intro-blog-text {

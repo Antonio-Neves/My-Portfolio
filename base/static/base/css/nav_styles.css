@@ -212,7 +212,7 @@
     }
 }
 
-@media screen and (min-width: 3000px) {
+@media screen and (min-width: 4000px) {
 
     .navbar-toggle {
         display: none;
