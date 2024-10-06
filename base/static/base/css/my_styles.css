@@ -270,7 +270,7 @@ p {
 }
 
 .intro-image-home {
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #01050D no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728217505/MyPortfolio/foto_principal_portfolio_2560x1440_nadjms.webp?auto=format&fit=crop&w=1440&q=80) #01050D no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -419,7 +419,7 @@ p {
     flex-wrap: wrap;
     width: 100%;
     height: 50vh;
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #00003f no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728217505/MyPortfolio/foto_principal_portfolio_2560x1440_nadjms.webp?auto=format&fit=crop&w=1440&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
 }
 
@@ -798,7 +798,7 @@ p {
     width: 100%;
     height: auto;
     padding: 3rem 0 1rem 0;
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728205618/MyPortfolio/foto_principal_portfolio_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #00003f no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728217505/MyPortfolio/foto_principal_portfolio_2560x1440_nadjms.webp?auto=format&fit=crop&w=1440&q=80) #00003f no-repeat center center fixed;
     background-size:cover;
     flex-wrap: wrap;
 }
@@ -1073,7 +1073,8 @@ p {
 /*****************************/
 
 .intro-image-blog {
-    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728209256/MyPortfolio/blog_photo_principal_3840x2160.webp?auto=format&fit=crop&w=2160&q=80) #01050D no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1728209255/MyPortfolio/blog_photo_principal_1920x1080_tjch6y.webp?auto=format&fit=crop&w=1440&q=80) #01050D no-repeat center center fixed;
+    background-size: cover;
 }
 
 .intro-blog-text {
