@@ -16,6 +16,7 @@ from decouple import config
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import dj_database_url
 
 # ----------------------------------------------------------
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -136,48 +137,19 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # 	}
 # }
 
-# --- PostgreSQL Development and production with db data--- #
-# DATABASES = {
-# 		'default': {
-# 			'ENGINE': 'django.db.backends.postgresql',
-# 			'NAME': config('NAME_DB'),
-# 			'USER': config('USER_DB'),
-# 			'PASSWORD': config('PASSWORD_DB'),
-# 			'HOST': config('HOST_DB'),
-# 			'PORT': config('PORT_DB'),
-# 		}
-# 	}
-
-
-# --- PostgreSQL in Heroku--- #
-# --- Development --- #
 if DEBUG:
     DATABASES = {
-    	'default': {
-    		'ENGINE': 'django.db.backends.postgresql',
-    		'NAME': config('NAME_DB'),
-    		'USER': config('USER_DB'),
-    		'PASSWORD': config('PASSWORD_DB'),
-    		'HOST': config('HOST_DB'),
-    		'PORT': config('PORT_DB'),
-    	}
+        'default': dj_database_url.config(
+            default=config('DATABASE_URL'),
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
     }
 
-    # import dj_database_url
-    #
-    # DATABASES = {
-    #     'default': dj_database_url.config(
-    #         conn_max_age=600,
-    #         ssl_require=True
-    #     )
-    # }
-
-# --- Prodution --- #
-if not DEBUG:
-    import dj_database_url
-
+else:
     DATABASES = {
         'default': dj_database_url.config(
+            default=config('DATABASE_URL'),
             conn_max_age=600,
             ssl_require=True
         )
