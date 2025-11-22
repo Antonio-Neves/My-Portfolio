@@ -219,15 +219,13 @@ if not DEBUG:
     EMAIL_HOST = config('EMAIL_HOST')
     EMAIL_HOST_USER = config('EMAIL_HOST_USER')
     EMAIL_PORT = config('EMAIL_PORT', cast=int)
-    EMAIL_USE_SSL = True
-    EMAIL_USE_TLS = False
-    EMAIL_TIMEOUT = 10
+    EMAIL_USE_TLS = True
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-    SERVER_EMAIL = EMAIL_HOST_USER
+    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-    ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
+    ADMINS = [(config('SUPER_USER'), config('SUPER_USER_EMAIL'))]
     MANAGERS = ADMINS
+    SERVER_EMAIL = EMAIL_HOST_USER
 
 
 # ----------------------------------------------------------
