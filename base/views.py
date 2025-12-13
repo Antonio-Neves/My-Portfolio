@@ -13,4 +13,3 @@ class ContactFormView(FormView):
 
 	def form_invalid(self, form, *args, **kwargs):
 		return super().form_invalid(form)
-
