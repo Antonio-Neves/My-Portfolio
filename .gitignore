@@ -15,7 +15,7 @@ db.sqlite3
 
 # Virtualenv
 .venv
-.venvdj4
+.venvln
 
 # Folders
 media
@@ -26,4 +26,3 @@ htmlcov/*
 /my_portfolio/settings_test.py
 
 # Testes
-
