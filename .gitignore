@@ -1,6 +1,9 @@
 # Sensitive files
 .env
 
+# AI
+AGENTS.md
+
 # Django #
 *.log
 *.pot
@@ -20,6 +23,7 @@ db.sqlite3
 # Folders
 media
 htmlcov/*
+issues_todo
 
 # Files
 /my_portfolio/settings_original.py
