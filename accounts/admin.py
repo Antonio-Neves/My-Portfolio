@@ -11,6 +11,14 @@ class CustomUserAdmin(UserAdmin):
 	form = CustomUserChangeForm
 	model = CustomUser
 
+	add_fieldsets = (
+		(None, {
+			'classes': ('wide',),
+			'fields': ('username', 'password1', 'password2'),
+		}),
+		('Personal information', {'fields': ('first_name', 'last_name')}),
+	)
+
 	list_display = (
 		'first_name',
 		'last_name',

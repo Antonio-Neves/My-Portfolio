@@ -45,7 +45,7 @@ class UserManager(BaseUserManager):
 class CustomUser(AbstractUser):
 
 	email = models.EmailField('Email', unique=True)
-	is_staff = models.BooleanField('Team member', default=True)
+	is_staff = models.BooleanField('Team member', default=False)
 
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = ['first_name', 'last_name']
