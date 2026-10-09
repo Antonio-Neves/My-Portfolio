@@ -47,7 +47,7 @@ if not DEBUG:
     # SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    CSRF_TRUSTED_ORIGINS = [config('TRUSTED_ORIGINS')]
+    CSRF_TRUSTED_ORIGINS = config('ALLOWED_HOSTS', cast=Csv())
 
 # ----------------------------------------------------------
 # Application definition
