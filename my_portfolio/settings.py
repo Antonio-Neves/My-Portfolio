@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from django.contrib.messages import constants
-from decouple import config
+from decouple import config, Csv
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
@@ -38,7 +38,7 @@ if DEBUG:
 
 # --- Production --- #
 if not DEBUG:
-    ALLOWED_HOSTS = [config('ALLOWED_HOSTS')]
+    ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # ----------------------------------------------------------
 # SSL and Cookies
