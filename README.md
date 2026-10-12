@@ -27,3 +27,10 @@ No seu projecto, mude o nome do arquivo '.env.example' para '.env' e faça as al
 <br><a href="https://www.antoniocalheirosneves.com/" target="_blank">Live Preview</a>
 
 <br><a href="https://www.antoniocalheirosneves.com/" target="_blank"><img src="https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727026737/MyPortfolio/my_portfolio_an_seo.jpg" style="width:640px;height:auto;"></a>
+
+<br><br>
+If this project was helpful to you, consider supporting it.
+
+Se este projeto te foi útil, considera apoiar.
+
+<a href="https://www.buymeacoffee.com/ACN70" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
