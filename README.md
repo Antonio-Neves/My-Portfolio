@@ -24,6 +24,6 @@ No seu projecto, mude o nome do arquivo '.env.example' para '.env' e faça as al
 
 <hr>
 
-<br><a href="https://antoniocalheirosneves.up.railway.app/" target="_blank">Live Preview</a>
+<br><a href="https://www.antoniocalheirosneves.com/" target="_blank">Live Preview</a>
 
-<br><a href="https://antoniocalheirosneves.up.railway.app/" target="_blank"><img src="https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727026737/MyPortfolio/my_portfolio_an_seo.jpg" style="width:640px;height:auto;"></a>
+<br><a href="https://www.antoniocalheirosneves.com/" target="_blank"><img src="https://res.cloudinary.com/antoniocalheirosneves/image/upload/v1727026737/MyPortfolio/my_portfolio_an_seo.jpg" style="width:640px;height:auto;"></a>
