@@ -5,6 +5,7 @@ from blog.models import Article
 
 
 class BlogPostSitemap(Sitemap):
+	protocol = "https"
 	changefreq = "weekly"
 
 	def items(self):
@@ -15,6 +16,7 @@ class BlogPostSitemap(Sitemap):
 
 
 class StaticViewSitemap(Sitemap):
+	protocol = "https"
 	changefreq = 'monthly'
 
 	def items(self):
