@@ -21,6 +21,14 @@ class ArticleAdmin(SummernoteModelAdmin):
 	prepopulated_fields = {'article_slug': ('article_name',)}
 	summernote_fields = ('article_content',)
 
+	def get_form(self, request, obj=None, **kwargs):
+		form = super().get_form(request, obj, **kwargs)
+		form.base_fields['article_content'].help_text = (
+			'Para imagens: carrega no Cloudinary e cola o URL em '
+			'Insert Image > By URL. Não uses o upload do computador.'
+		)
+		return form
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory, SubCategoryAdmin)

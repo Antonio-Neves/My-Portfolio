@@ -1,6 +1,21 @@
+from html.parser import HTMLParser
+
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
+
+
+class _ArticleImageParser(HTMLParser):
+	def __init__(self):
+		super().__init__()
+		self.sources = []
+
+	def handle_starttag(self, tag, attrs):
+		if tag.lower() == 'img':
+			for name, value in attrs:
+				if name.lower() == 'src' and value:
+					self.sources.append(value.strip())
 
 
 # --- Category --- #
@@ -63,6 +78,32 @@ class Article(models.Model):
 		verbose_name = 'Article'
 		verbose_name_plural = 'Articles'
 		ordering = ['-modified_at']
+
+	def clean(self):
+		super().clean()
+		parser = _ArticleImageParser()
+		parser.feed(self.article_content or '')
+
+		for src in parser.sources:
+			lower_src = src.lower()
+			if lower_src.startswith('data:'):
+				raise ValidationError({
+					'article_content': (
+						'Não uses imagens em base64. Carrega a imagem no Cloudinary '
+						'e cola o URL em Insert Image > By URL.'
+					)
+				})
+			if lower_src.startswith('/media/') or lower_src.startswith('media/'):
+				raise ValidationError({
+					'article_content': (
+						'Não uses imagens locais. Carrega a imagem no Cloudinary '
+						'e cola o URL em Insert Image > By URL.'
+					)
+				})
+			if not lower_src.startswith(('http://', 'https://')):
+				raise ValidationError({
+					'article_content': 'As imagens do artigo têm de ser links http(s).'
+				})
 
 	def get_absolute_url(self):
 		return reverse('article-detail', args=[self.article_slug])

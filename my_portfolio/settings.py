@@ -14,8 +14,8 @@ from pathlib import Path
 from django.contrib.messages import constants
 from decouple import config, Csv
 import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+# import cloudinary.uploader
+# import cloudinary.api
 import dj_database_url
 
 # ----------------------------------------------------------
@@ -85,6 +85,11 @@ SITE_ID = 1
 
 # --- Summernote --- #
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+SUMMERNOTE_CONFIG = {
+    'disable_attachment': True,
+}
+
 
 # --- Recaptcha Keys --- #
 RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
@@ -203,7 +208,7 @@ cloudinary.config(
   	api_secret = config('API_SECRET')
 )
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # ----------------------------------------------------------
